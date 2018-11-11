@@ -1,0 +1,7 @@
+127.0.0.1 www.rgfalso.com.br -> copiar dentro windows/System32/drivers/etc/hosts 
+
+abra o httpd-vhosts.conf que está dentro de xampp/apache/conf/extra/httpd-vhosts.conf e cole os dados do arquivo httpd-vhosts.conf na última linha
+
+reinice o xampp
+
+
