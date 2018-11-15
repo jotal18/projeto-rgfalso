@@ -1,4 +1,25 @@
-<!DOCTYPE html>
+<?php
+/* Smarty version 3.1.33, created on 2018-11-14 17:56:19
+  from 'C:\xampp\htdocs\rgfalso\smarty\templates\pesquisar_rg.html' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.33',
+  'unifunc' => 'content_5bec53b35b0b08_16723478',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '8e4ddc1cf01f9fe2de1e94cbd34098b14234e129' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\rgfalso\\smarty\\templates\\pesquisar_rg.html',
+      1 => 1542212999,
+      2 => 'file',
+    ),
+  ),
+  'cache_lifetime' => 3600,
+),true)) {
+function content_5bec53b35b0b08_16723478 (Smarty_Internal_Template $_smarty_tpl) {
+?><!DOCTYPE html>
 <html lang="pt-br">
   <head>
     <!-- Meta tags Obrigatórias -->
@@ -38,7 +59,7 @@
         </div>
 
         <div class="col-md-9">
-          <form>
+          <form method="post" action="/pesquisa">
             <div class="accordion" id="pesquisa">
 
               <div class="card border-success">
@@ -117,4 +138,5 @@
       });
     </script>
   </body>
-</html>
+</html><?php }
+}

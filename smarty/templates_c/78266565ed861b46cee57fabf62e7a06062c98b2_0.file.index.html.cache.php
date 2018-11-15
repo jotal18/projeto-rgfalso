@@ -1,3 +1,28 @@
+<?php
+/* Smarty version 3.1.33, created on 2018-11-14 17:28:21
+  from 'C:\xampp\htdocs\rgfalso\smarty\templates\index.html' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.33',
+  'unifunc' => 'content_5bec4d25383006_32931503',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '78266565ed861b46cee57fabf62e7a06062c98b2' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\rgfalso\\smarty\\templates\\index.html',
+      1 => 1542191789,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_5bec4d25383006_32931503 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->compiled->nocache_hash = '17908673915bec4d2534c4f4_19552197';
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -8,7 +33,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-    <title>RG Falso - Editar</title>
+    <title>RG Falso - Página Inicial</title>
   </head>
   <body>
 
@@ -40,7 +65,7 @@
         <div class="col-md-9">
             <div class="card border-success bg-success">
               <div class="card-header text-white">
-                <h5>Altere os dados do RG Falso</h5>
+                <h5>Cadastre os dados do RG Falso</h5>
               </div>
               <div class="card-body bg-white">
                 <form class="text-left">
@@ -65,10 +90,10 @@
                 </div>
                 <div class="row mt-4">
                   <div class="col">
-                    <a href="index.html" class="btn btn-secondary btn-block" type="reset">Voltar</a>
+                    <button class="btn btn-secondary btn-block" type="reset">Cancelar</button>
                   </div>
                   <div class="col">
-                    <button class="btn btn-primary btn-block" type="submit">Alterar</button>
+                    <button class="btn btn-primary btn-block" type="submit">Cadastrar</button>
                   </div>
                 </div> 
               </form>  
@@ -84,15 +109,24 @@
 
     <!-- JavaScript (Opcional) -->
     <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <?php echo '<script'; ?>
+ src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"><?php echo '</script'; ?>
+>
 
-    <script type="application/javascript">
+    <?php echo '<script'; ?>
+ type="application/javascript">
       $('input[type="file"]').change(function(e){
           var fileName = e.target.files[0].name;
           $('.custom-file-label').html(fileName);
       });
-    </script>
+    <?php echo '</script'; ?>
+>
   </body>
-</html>
+</html><?php }
+}
