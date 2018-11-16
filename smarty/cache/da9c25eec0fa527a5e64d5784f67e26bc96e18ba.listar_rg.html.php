@@ -1,24 +1,24 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-11-15 16:40:37
-  from 'C:\xampp\htdocs\rgfalso\smarty\templates\index.html' */
+/* Smarty version 3.1.33, created on 2018-11-15 22:12:42
+  from 'C:\xampp\htdocs\rgfalso\smarty\templates\listar_rg.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bedbda5c71094_39421987',
+  'unifunc' => 'content_5bee0b7a21d5d8_67762633',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '78266565ed861b46cee57fabf62e7a06062c98b2' => 
+    '908620eaa218bb0e8686c696773f5f38505d7b33' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\rgfalso\\smarty\\templates\\index.html',
-      1 => 1542191789,
+      0 => 'C:\\xampp\\htdocs\\rgfalso\\smarty\\templates\\listar_rg.html',
+      1 => 1542327161,
       2 => 'file',
     ),
   ),
   'cache_lifetime' => 3600,
 ),true)) {
-function content_5bedbda5c71094_39421987 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bee0b7a21d5d8_67762633 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -29,7 +29,9 @@ function content_5bedbda5c71094_39421987 (Smarty_Internal_Template $_smarty_tpl)
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-    <title>RG Falso - Página Inicial</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+    <title>RG Falso - Listagem de RG</title>
   </head>
   <body>
 
@@ -59,42 +61,44 @@ function content_5bedbda5c71094_39421987 (Smarty_Internal_Template $_smarty_tpl)
         </div>
 
         <div class="col-md-9">
-            <div class="card border-success bg-success">
-              <div class="card-header text-white">
-                <h5>Cadastre os dados do RG Falso</h5>
+            <div class="card border-success">
+              <div class="card-header text-white bg-success">
+                <h5>Listagem de RG</h5>
               </div>
-              <div class="card-body bg-white">
-                <form class="text-left">
-                <div class="form-group">
-                  <label for="nome">Nome</label>
-                  <input class="form-control" type="text" name="nome" id="nome" placeholder="digite o nome completo">
-                </div>
-                <div class="form-group">
-                  <label for="nome_mae">Nome da Mãe</label>
-                  <input class="form-control" type="text" name="nome_mae" id="nome_mae" placeholder="digite o nome completo da mãe">
-                </div>
-                <div class="form-group">
-                  <label for="dt_nascimento">Data de Nascimento</label>
-                  <input class="form-control" type="text" name="dt_nascimento" id="dt_nascimento" placeholder="dd/mm/aaaa" maxlength="10">
-                </div>
-                <p class="mb-2">Escolha o ofício digitalizado</p>
-                <div class="custom-file">
-                  <input type="file" class="custom-file-input" id="oficio" required>
-                  <label class="custom-file-label" for="oficio" name="oficio">
-                    escolha o arquivo digitalizado no formato .pdf
-                  </label>
-                </div>
-                <div class="row mt-4">
-                  <div class="col">
-                    <button class="btn btn-secondary btn-block" type="reset">Cancelar</button>
-                  </div>
-                  <div class="col">
-                    <button class="btn btn-primary btn-block" type="submit">Cadastrar</button>
-                  </div>
-                </div> 
-              </form>  
-              </div>
-              
+
+              <table class="table table-hover table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">RG</th>
+                    <th scope="col">Ofício</th>
+                    <th scope="col">Detalhar</th>
+                    <th scope="col">Excluir</th>
+                  </tr>
+                </thead>
+                
+                <tbody>
+                                    <tr>
+                    <th scope="row">2</th>
+                    <td>Chico</td>
+                    <td>11111</td>
+                    <td><a class="btn btn-primary" href="#">Ofício</a></td>
+                    <td><a class="btn btn-warning" href="#">Detalhar</a></td>
+                    <td><a class="btn btn-danger" href="#"><i class="fas fa-trash-alt"></i></i></a></td>
+                  </tr>
+                                    <tr>
+                    <th scope="row">2</th>
+                    <td>Chico</td>
+                    <td>11111</td>
+                    <td><a class="btn btn-primary" href="#">Ofício</a></td>
+                    <td><a class="btn btn-warning" href="#">Detalhar</a></td>
+                    <td><a class="btn btn-danger" href="#"><i class="fas fa-trash-alt"></i></i></a></td>
+                  </tr>
+                                    
+                </tbody>
+              </table>
+
             </div>
         </div>
       </div>

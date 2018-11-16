@@ -1,25 +1,4 @@
-<?php
-/* Smarty version 3.1.33, created on 2018-11-15 16:46:30
-  from 'C:\xampp\htdocs\rgfalso\smarty\templates\lista_rg.html' */
-
-/* @var Smarty_Internal_Template $_smarty_tpl */
-if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
-  'version' => '3.1.33',
-  'unifunc' => 'content_5bedbf06d395d4_00465489',
-  'has_nocache_code' => false,
-  'file_dependency' => 
-  array (
-    'd6a181bbe5e054a0d390652f65c2d23945a7116c' => 
-    array (
-      0 => 'C:\\xampp\\htdocs\\rgfalso\\smarty\\templates\\lista_rg.html',
-      1 => 1542050260,
-      2 => 'file',
-    ),
-  ),
-  'cache_lifetime' => 3600,
-),true)) {
-function content_5bedbf06d395d4_00465489 (Smarty_Internal_Template $_smarty_tpl) {
-?><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
   <head>
     <!-- Meta tags Obrigatórias -->
@@ -77,39 +56,18 @@ function content_5bedbf06d395d4_00465489 (Smarty_Internal_Template $_smarty_tpl)
                     <th scope="col">Excluir</th>
                   </tr>
                 </thead>
+                
                 <tbody>
+                  {section name=customer loop=$teste}
                   <tr>
-                    <th scope="row">1</th>
-                    <td>Juarez Lopes dos Santos Filho</td>
-                    <td>4546456465645</td>
+                    <th scope="row">{$dados.idrg}</th>
+                    <td>{$dados.nome}</td>
+                    <td>{$dados.num_rg}</td>
                     <td><a class="btn btn-primary" href="#">Ofício</a></td>
                     <td><a class="btn btn-warning" href="#">Detalhar</a></td>
                     <td><a class="btn btn-danger" href="#"><i class="fas fa-trash-alt"></i></i></a></td>
                   </tr>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Juarez Lopes dos Santos Filho</td>
-                    <td>4546456465645</td>
-                    <td><a class="btn btn-primary" href="#">Ofício</a></td>
-                    <td><a class="btn btn-warning" href="#">Detalhar</a></td>
-                    <td><a class="btn btn-danger" href="#"><i class="fas fa-trash-alt"></i></i></a></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Juarez Lopes dos Santos Filho</td>
-                    <td>4546456465645</td>
-                    <td><a class="btn btn-primary" href="#">Ofício</a></td>
-                    <td><a class="btn btn-warning" href="#">Detalhar</a></td>
-                    <td><a class="btn btn-danger" href="#"><i class="fas fa-trash-alt"></i></i></a></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Juarez Lopes dos Santos Filho</td>
-                    <td>4546456465645</td>
-                    <td><a class="btn btn-primary" href="#">Ofício</a></td>
-                    <td><a class="btn btn-warning" href="#">Detalhar</a></td>
-                    <td><a class="btn btn-danger" href="#"><i class="fas fa-trash-alt"></i></i></a></td>
-                  </tr>
+                  {/section}                  
                 </tbody>
               </table>
 
@@ -134,5 +92,4 @@ function content_5bedbf06d395d4_00465489 (Smarty_Internal_Template $_smarty_tpl)
       });
     </script>
   </body>
-</html><?php }
-}
+</html>

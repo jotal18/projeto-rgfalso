@@ -45,6 +45,18 @@ class Rg extends Model{
 		]);
 	}
 
+	public function pesquisa()
+	{
+		$sql = new Sql();
+
+		$results = $sql->select("SELECT * FROM rg WHERE nome = :nome" , array(
+				":nome" => $this->getnome()
+		));
+
+		$this->setData($results[0]);
+
+		
+	}
 }
 
 

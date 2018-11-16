@@ -1,5 +1,5 @@
 <?php 
-ee
+
 require_once('vendor/autoload.php');
 
 use APP\Page;
@@ -23,7 +23,7 @@ $app->get('/lista', function() {
     
 $teste = new Page();
 
-$teste->setTpl('lista_rg.html');
+$teste->setTpl('listar_rg.html');
 
 });
 
@@ -32,23 +32,30 @@ $app->get('/pesquisa', function() {
     
 $teste = new Page();
 
-$teste->setTpl('pesquisar_rg');
+$teste->setTpl('pesquisar_rg.html');
 
 });
 
-
 $app->post('/pesquisa', function() {
     
-	$info = Rg::listAll();
-	print_r($info);
-	$teste = new Page();
-	$teste->setData($_POST);
-	$teste->setTpl('lista_rg', array(
-		'teste'=>$info
-	));
+	$dados = new Rg();
+	$dados->setData($_POST);
+	// echo $dados->getnome();
+	// echo $dados->getnome_mae();
+	// echo $dados->getdt_nascimento();
+	
+	$dados->pesquisa();
 
+	echo '<pre>';
+	print_r($dados);
+	echo '</pre>';
+
+	$page = new Page();
+	$page->setTpl('listar_rg.html', array('dados'=>$dados->getValues(), 'teste'=>2));
+	
 });
 
 $app->run();
  
  ?>
+

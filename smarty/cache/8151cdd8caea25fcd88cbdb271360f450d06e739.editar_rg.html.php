@@ -1,24 +1,24 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-11-15 16:40:37
-  from 'C:\xampp\htdocs\rgfalso\smarty\templates\index.html' */
+/* Smarty version 3.1.33, created on 2018-11-15 16:48:43
+  from 'C:\xampp\htdocs\rgfalso\smarty\templates\editar_rg.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bedbda5c71094_39421987',
+  'unifunc' => 'content_5bedbf8bc28660_57768928',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '78266565ed861b46cee57fabf62e7a06062c98b2' => 
+    'b856f2117c9ecc9cef91fb3f31c5810342911c74' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\rgfalso\\smarty\\templates\\index.html',
-      1 => 1542191789,
+      0 => 'C:\\xampp\\htdocs\\rgfalso\\smarty\\templates\\editar_rg.html',
+      1 => 1542050260,
       2 => 'file',
     ),
   ),
   'cache_lifetime' => 3600,
 ),true)) {
-function content_5bedbda5c71094_39421987 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bedbf8bc28660_57768928 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -29,7 +29,7 @@ function content_5bedbda5c71094_39421987 (Smarty_Internal_Template $_smarty_tpl)
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-    <title>RG Falso - Página Inicial</title>
+    <title>RG Falso - Editar</title>
   </head>
   <body>
 
@@ -61,7 +61,7 @@ function content_5bedbda5c71094_39421987 (Smarty_Internal_Template $_smarty_tpl)
         <div class="col-md-9">
             <div class="card border-success bg-success">
               <div class="card-header text-white">
-                <h5>Cadastre os dados do RG Falso</h5>
+                <h5>Altere os dados do RG Falso</h5>
               </div>
               <div class="card-body bg-white">
                 <form class="text-left">
@@ -86,10 +86,10 @@ function content_5bedbda5c71094_39421987 (Smarty_Internal_Template $_smarty_tpl)
                 </div>
                 <div class="row mt-4">
                   <div class="col">
-                    <button class="btn btn-secondary btn-block" type="reset">Cancelar</button>
+                    <a href="index.html" class="btn btn-secondary btn-block" type="reset">Voltar</a>
                   </div>
                   <div class="col">
-                    <button class="btn btn-primary btn-block" type="submit">Cadastrar</button>
+                    <button class="btn btn-primary btn-block" type="submit">Alterar</button>
                   </div>
                 </div> 
               </form>  

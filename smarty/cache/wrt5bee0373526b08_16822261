@@ -1,4 +1,25 @@
-<!DOCTYPE html>
+<?php
+/* Smarty version 3.1.33, created on 2018-11-15 21:38:27
+  from 'C:\xampp\htdocs\rgfalso\smarty\templates\listar_rg.html' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.33',
+  'unifunc' => 'content_5bee03735252e1_60247985',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '908620eaa218bb0e8686c696773f5f38505d7b33' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\rgfalso\\smarty\\templates\\listar_rg.html',
+      1 => 1542325105,
+      2 => 'file',
+    ),
+  ),
+  'cache_lifetime' => 3600,
+),true)) {
+function content_5bee03735252e1_60247985 (Smarty_Internal_Template $_smarty_tpl) {
+?><!DOCTYPE html>
 <html lang="pt-br">
   <head>
     <!-- Meta tags Obrigatórias -->
@@ -56,38 +77,90 @@
                     <th scope="col">Excluir</th>
                   </tr>
                 </thead>
+                
                 <tbody>
                   <tr>
-                    <th scope="row">1</th>
-                    <td>Juarez Lopes dos Santos Filho</td>
-                    <td>4546456465645</td>
+                                      
+                  
+                    <th scope="row">2</th>
+                    <td>Chico</td>
+                    <td>11111</td>
                     <td><a class="btn btn-primary" href="#">Ofício</a></td>
                     <td><a class="btn btn-warning" href="#">Detalhar</a></td>
                     <td><a class="btn btn-danger" href="#"><i class="fas fa-trash-alt"></i></i></a></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Juarez Lopes dos Santos Filho</td>
-                    <td>4546456465645</td>
+                  
+
+                                      
+                  
+                    <th scope="row">2</th>
+                    <td>Chico</td>
+                    <td>11111</td>
                     <td><a class="btn btn-primary" href="#">Ofício</a></td>
                     <td><a class="btn btn-warning" href="#">Detalhar</a></td>
                     <td><a class="btn btn-danger" href="#"><i class="fas fa-trash-alt"></i></i></a></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Juarez Lopes dos Santos Filho</td>
-                    <td>4546456465645</td>
+                  
+
+                                      
+                  
+                    <th scope="row">2</th>
+                    <td>Chico</td>
+                    <td>11111</td>
                     <td><a class="btn btn-primary" href="#">Ofício</a></td>
                     <td><a class="btn btn-warning" href="#">Detalhar</a></td>
                     <td><a class="btn btn-danger" href="#"><i class="fas fa-trash-alt"></i></i></a></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Juarez Lopes dos Santos Filho</td>
-                    <td>4546456465645</td>
+                  
+
+                                      
+                  
+                    <th scope="row">2</th>
+                    <td>Chico</td>
+                    <td>11111</td>
                     <td><a class="btn btn-primary" href="#">Ofício</a></td>
                     <td><a class="btn btn-warning" href="#">Detalhar</a></td>
                     <td><a class="btn btn-danger" href="#"><i class="fas fa-trash-alt"></i></i></a></td>
+                  
+
+                                      
+                  
+                    <th scope="row">2</th>
+                    <td>Chico</td>
+                    <td>11111</td>
+                    <td><a class="btn btn-primary" href="#">Ofício</a></td>
+                    <td><a class="btn btn-warning" href="#">Detalhar</a></td>
+                    <td><a class="btn btn-danger" href="#"><i class="fas fa-trash-alt"></i></i></a></td>
+                  
+
+                                      
+                  
+                    <th scope="row">2</th>
+                    <td>Chico</td>
+                    <td>11111</td>
+                    <td><a class="btn btn-primary" href="#">Ofício</a></td>
+                    <td><a class="btn btn-warning" href="#">Detalhar</a></td>
+                    <td><a class="btn btn-danger" href="#"><i class="fas fa-trash-alt"></i></i></a></td>
+                  
+
+                                      
+                  
+                    <th scope="row">2</th>
+                    <td>Chico</td>
+                    <td>11111</td>
+                    <td><a class="btn btn-primary" href="#">Ofício</a></td>
+                    <td><a class="btn btn-warning" href="#">Detalhar</a></td>
+                    <td><a class="btn btn-danger" href="#"><i class="fas fa-trash-alt"></i></i></a></td>
+                  
+
+                                      
+                  
+                    <th scope="row">2</th>
+                    <td>Chico</td>
+                    <td>11111</td>
+                    <td><a class="btn btn-primary" href="#">Ofício</a></td>
+                    <td><a class="btn btn-warning" href="#">Detalhar</a></td>
+                    <td><a class="btn btn-danger" href="#"><i class="fas fa-trash-alt"></i></i></a></td>
+                  
+
+                                    
                   </tr>
                 </tbody>
               </table>
@@ -113,4 +186,5 @@
       });
     </script>
   </body>
-</html>
+</html><?php }
+}

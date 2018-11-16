@@ -7,7 +7,7 @@ class Sql {
 	CONST HOSTNAME = '127.0.0.1';
 	CONST USERNAME = 'root';
 	CONST PASSWORD = '';
-	CONST DBNAME = 'rgfalso';
+	CONST DBNAME = 'rg_falso';
 
 	private $conn;
 

@@ -1,25 +1,29 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-11-15 16:46:30
-  from 'C:\xampp\htdocs\rgfalso\smarty\templates\lista_rg.html' */
+/* Smarty version 3.1.33, created on 2018-11-15 22:12:42
+  from 'C:\xampp\htdocs\rgfalso\smarty\templates\listar_rg.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bedbf06d395d4_00465489',
+  'unifunc' => 'content_5bee0b7a1fc8f0_21154565',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    'd6a181bbe5e054a0d390652f65c2d23945a7116c' => 
+    '908620eaa218bb0e8686c696773f5f38505d7b33' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\rgfalso\\smarty\\templates\\lista_rg.html',
-      1 => 1542050260,
+      0 => 'C:\\xampp\\htdocs\\rgfalso\\smarty\\templates\\listar_rg.html',
+      1 => 1542327161,
       2 => 'file',
     ),
   ),
-  'cache_lifetime' => 3600,
-),true)) {
-function content_5bedbf06d395d4_00465489 (Smarty_Internal_Template $_smarty_tpl) {
-?><!DOCTYPE html>
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_5bee0b7a1fc8f0_21154565 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->compiled->nocache_hash = '21324658255bee0b7a1a73d5_88278004';
+?>
+<!DOCTYPE html>
 <html lang="pt-br">
   <head>
     <!-- Meta tags Obrigatórias -->
@@ -77,39 +81,30 @@ function content_5bedbf06d395d4_00465489 (Smarty_Internal_Template $_smarty_tpl)
                     <th scope="col">Excluir</th>
                   </tr>
                 </thead>
+                
                 <tbody>
+                  <?php
+$__section_customer_0_loop = (is_array(@$_loop=$_smarty_tpl->tpl_vars['teste']->value) ? count($_loop) : max(0, (int) $_loop));
+$__section_customer_0_total = $__section_customer_0_loop;
+$_smarty_tpl->tpl_vars['__smarty_section_customer'] = new Smarty_Variable(array());
+if ($__section_customer_0_total !== 0) {
+for ($__section_customer_0_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_customer']->value['index'] = 0; $__section_customer_0_iteration <= $__section_customer_0_total; $__section_customer_0_iteration++, $_smarty_tpl->tpl_vars['__smarty_section_customer']->value['index']++){
+?>
                   <tr>
-                    <th scope="row">1</th>
-                    <td>Juarez Lopes dos Santos Filho</td>
-                    <td>4546456465645</td>
+                    <th scope="row"><?php echo $_smarty_tpl->tpl_vars['dados']->value['idrg'];?>
+</th>
+                    <td><?php echo $_smarty_tpl->tpl_vars['dados']->value['nome'];?>
+</td>
+                    <td><?php echo $_smarty_tpl->tpl_vars['dados']->value['num_rg'];?>
+</td>
                     <td><a class="btn btn-primary" href="#">Ofício</a></td>
                     <td><a class="btn btn-warning" href="#">Detalhar</a></td>
                     <td><a class="btn btn-danger" href="#"><i class="fas fa-trash-alt"></i></i></a></td>
                   </tr>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Juarez Lopes dos Santos Filho</td>
-                    <td>4546456465645</td>
-                    <td><a class="btn btn-primary" href="#">Ofício</a></td>
-                    <td><a class="btn btn-warning" href="#">Detalhar</a></td>
-                    <td><a class="btn btn-danger" href="#"><i class="fas fa-trash-alt"></i></i></a></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Juarez Lopes dos Santos Filho</td>
-                    <td>4546456465645</td>
-                    <td><a class="btn btn-primary" href="#">Ofício</a></td>
-                    <td><a class="btn btn-warning" href="#">Detalhar</a></td>
-                    <td><a class="btn btn-danger" href="#"><i class="fas fa-trash-alt"></i></i></a></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Juarez Lopes dos Santos Filho</td>
-                    <td>4546456465645</td>
-                    <td><a class="btn btn-primary" href="#">Ofício</a></td>
-                    <td><a class="btn btn-warning" href="#">Detalhar</a></td>
-                    <td><a class="btn btn-danger" href="#"><i class="fas fa-trash-alt"></i></i></a></td>
-                  </tr>
+                  <?php
+}
+}
+?>                  
                 </tbody>
               </table>
 
@@ -123,16 +118,24 @@ function content_5bedbf06d395d4_00465489 (Smarty_Internal_Template $_smarty_tpl)
 
     <!-- JavaScript (Opcional) -->
     <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <?php echo '<script'; ?>
+ src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"><?php echo '</script'; ?>
+>
 
-    <script type="application/javascript">
+    <?php echo '<script'; ?>
+ type="application/javascript">
       $('input[type="file"]').change(function(e){
           var fileName = e.target.files[0].name;
           $('.custom-file-label').html(fileName);
       });
-    </script>
+    <?php echo '</script'; ?>
+>
   </body>
 </html><?php }
 }
