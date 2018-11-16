@@ -54,7 +54,10 @@ class Rg extends Model{
 		));
 
 		$this->setData($results[0]);
-
+		
+		echo '<pre>';
+		print_r($results[0]);
+		echo '</pre>';
 		
 	}
 }

@@ -58,16 +58,16 @@
                 </thead>
                 
                 <tbody>
-                  {section name=customer loop=$teste}
+                  {section name=i loop=$autores}
                   <tr>
-                    <th scope="row">{$dados.idrg}</th>
-                    <td>{$dados.nome}</td>
-                    <td>{$dados.num_rg}</td>
+                    <th scope="row">{$autores[i]}</th>
+                    <td>{$autores[i]}</td>
+                    <td>{$autores[i]}</td>
                     <td><a class="btn btn-primary" href="#">Ofício</a></td>
                     <td><a class="btn btn-warning" href="#">Detalhar</a></td>
                     <td><a class="btn btn-danger" href="#"><i class="fas fa-trash-alt"></i></i></a></td>
                   </tr>
-                  {/section}                  
+                    {/section}          
                 </tbody>
               </table>
 

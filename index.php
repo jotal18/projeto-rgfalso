@@ -2,6 +2,7 @@
 
 require_once('vendor/autoload.php');
 
+
 use APP\Page;
 use \Slim\Slim;
 use APP\Rg;
@@ -46,12 +47,26 @@ $app->post('/pesquisa', function() {
 	
 	$dados->pesquisa();
 
-	echo '<pre>';
-	print_r($dados);
-	echo '</pre>';
+	// echo '<pre>';
+	// print_r($dados);
+	// echo '</pre>';
+	
 
-	$page = new Page();
-	$page->setTpl('listar_rg.html', array('dados'=>$dados->getValues(), 'teste'=>2));
+	$array_autores = array(
+		"Juliano Niederauer",
+		"Alexamdre Coutinho",
+		"Lino Sarlo da Silva",
+		"Felipe"
+	);
+
+	require_once('vendor/smarty/smarty/libs/Smarty.class.php');
+	$smarty = new Smarty();
+	$smarty->template_dir = $_SERVER['DOCUMENT_ROOT'] . '/smarty/templates/';
+        $smarty->compile_dir  = $_SERVER['DOCUMENT_ROOT'] . '/smarty/templates_c/';
+        $smarty->config_dir   = $_SERVER['DOCUMENT_ROOT'] . '/smarty/configs/';
+        $smarty->cache_dir    = $_SERVER['DOCUMENT_ROOT'] . '/smarty/cache/';
+	$smarty->assign("autores", $array_autores);
+	$smarty->display("listar_rg.html");
 	
 });
 
