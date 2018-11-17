@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-11-13 22:52:49
-  from 'C:\xampp\htdocs\rgfalso\smarty\templates\editar_rg.html' */
+/* Smarty version 3.1.33, created on 2018-11-16 23:55:15
+  from 'C:\xampp\htdocs\projetos\rgfalso\smarty\templates\index.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5beb71e105e720_63164364',
+  'unifunc' => 'content_5bef4ad32c20b8_75748209',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    'b856f2117c9ecc9cef91fb3f31c5810342911c74' => 
+    '69ef7d57e6f2a5d92ac285482b80841c830987ce' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\rgfalso\\smarty\\templates\\editar_rg.html',
-      1 => 1542050260,
+      0 => 'C:\\xampp\\htdocs\\projetos\\rgfalso\\smarty\\templates\\index.html',
+      1 => 1542400994,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5beb71e105e720_63164364 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->compiled->nocache_hash = '20094257645beb71e10110e9_49561982';
+function content_5bef4ad32c20b8_75748209 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->compiled->nocache_hash = '14762560875bef4ad3299d16_53634339';
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -33,7 +33,7 @@ $_smarty_tpl->compiled->nocache_hash = '20094257645beb71e10110e9_49561982';
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-    <title>RG Falso - Editar</title>
+    <title>RG Falso - Página Inicial</title>
   </head>
   <body>
 
@@ -65,7 +65,7 @@ $_smarty_tpl->compiled->nocache_hash = '20094257645beb71e10110e9_49561982';
         <div class="col-md-9">
             <div class="card border-success bg-success">
               <div class="card-header text-white">
-                <h5>Altere os dados do RG Falso</h5>
+                <h5>Cadastre os dados do RG Falso</h5>
               </div>
               <div class="card-body bg-white">
                 <form class="text-left">
@@ -90,10 +90,10 @@ $_smarty_tpl->compiled->nocache_hash = '20094257645beb71e10110e9_49561982';
                 </div>
                 <div class="row mt-4">
                   <div class="col">
-                    <a href="index.html" class="btn btn-secondary btn-block" type="reset">Voltar</a>
+                    <button class="btn btn-secondary btn-block" type="reset">Cancelar</button>
                   </div>
                   <div class="col">
-                    <button class="btn btn-primary btn-block" type="submit">Alterar</button>
+                    <button class="btn btn-primary btn-block" type="submit">Cadastrar</button>
                   </div>
                 </div> 
               </form>  

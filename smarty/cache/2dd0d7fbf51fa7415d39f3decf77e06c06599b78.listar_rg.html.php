@@ -1,29 +1,25 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-11-13 23:03:10
-  from 'C:\xampp\htdocs\rgfalso\smarty\templates\lista_rg.html' */
+/* Smarty version 3.1.33, created on 2018-11-16 23:54:30
+  from 'C:\xampp\htdocs\projetos\rgfalso\smarty\templates\listar_rg.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5beb744e285258_24204876',
+  'unifunc' => 'content_5bef4aa64dd002_78771427',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    'd6a181bbe5e054a0d390652f65c2d23945a7116c' => 
+    '8840afc81b769ac4174ae66b59e0e58467952a90' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\rgfalso\\smarty\\templates\\lista_rg.html',
-      1 => 1542050260,
+      0 => 'C:\\xampp\\htdocs\\projetos\\rgfalso\\smarty\\templates\\listar_rg.html',
+      1 => 1542408857,
       2 => 'file',
     ),
   ),
-  'includes' => 
-  array (
-  ),
-),false)) {
-function content_5beb744e285258_24204876 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->compiled->nocache_hash = '13597483765beb744e24ded7_34924451';
-?>
-<!DOCTYPE html>
+  'cache_lifetime' => 3600,
+),true)) {
+function content_5bef4aa64dd002_78771427 (Smarty_Internal_Template $_smarty_tpl) {
+?><!DOCTYPE html>
 <html lang="pt-br">
   <head>
     <!-- Meta tags Obrigatórias -->
@@ -81,39 +77,25 @@ $_smarty_tpl->compiled->nocache_hash = '13597483765beb744e24ded7_34924451';
                     <th scope="col">Excluir</th>
                   </tr>
                 </thead>
+                
                 <tbody>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Juarez Lopes dos Santos Filho</td>
-                    <td>4546456465645</td>
-                    <td><a class="btn btn-primary" href="#">Ofício</a></td>
+                                    <tr>
+                    <th scope="row">2</th>
+                    <td>Francisco</td>
+                    <td>456456132</td>
+                    <td><a class="btn btn-primary" href="#">Oficio</a></td>
                     <td><a class="btn btn-warning" href="#">Detalhar</a></td>
                     <td><a class="btn btn-danger" href="#"><i class="fas fa-trash-alt"></i></i></a></td>
                   </tr>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Juarez Lopes dos Santos Filho</td>
-                    <td>4546456465645</td>
-                    <td><a class="btn btn-primary" href="#">Ofício</a></td>
+                                      <tr>
+                    <th scope="row">5</th>
+                    <td>francisco</td>
+                    <td>0</td>
+                    <td><a class="btn btn-primary" href="#">Oficio</a></td>
                     <td><a class="btn btn-warning" href="#">Detalhar</a></td>
                     <td><a class="btn btn-danger" href="#"><i class="fas fa-trash-alt"></i></i></a></td>
                   </tr>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Juarez Lopes dos Santos Filho</td>
-                    <td>4546456465645</td>
-                    <td><a class="btn btn-primary" href="#">Ofício</a></td>
-                    <td><a class="btn btn-warning" href="#">Detalhar</a></td>
-                    <td><a class="btn btn-danger" href="#"><i class="fas fa-trash-alt"></i></i></a></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Juarez Lopes dos Santos Filho</td>
-                    <td>4546456465645</td>
-                    <td><a class="btn btn-primary" href="#">Ofício</a></td>
-                    <td><a class="btn btn-warning" href="#">Detalhar</a></td>
-                    <td><a class="btn btn-danger" href="#"><i class="fas fa-trash-alt"></i></i></a></td>
-                  </tr>
+                              
                 </tbody>
               </table>
 
@@ -127,24 +109,16 @@ $_smarty_tpl->compiled->nocache_hash = '13597483765beb744e24ded7_34924451';
 
     <!-- JavaScript (Opcional) -->
     <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
-    <?php echo '<script'; ?>
- src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"><?php echo '</script'; ?>
->
-    <?php echo '<script'; ?>
- src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"><?php echo '</script'; ?>
->
-    <?php echo '<script'; ?>
- src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"><?php echo '</script'; ?>
->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
-    <?php echo '<script'; ?>
- type="application/javascript">
+    <script type="application/javascript">
       $('input[type="file"]').change(function(e){
           var fileName = e.target.files[0].name;
           $('.custom-file-label').html(fileName);
       });
-    <?php echo '</script'; ?>
->
+    </script>
   </body>
 </html><?php }
 }

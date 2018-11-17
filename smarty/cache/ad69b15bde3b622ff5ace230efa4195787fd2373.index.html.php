@@ -1,29 +1,25 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-11-14 17:28:21
-  from 'C:\xampp\htdocs\rgfalso\smarty\templates\index.html' */
+/* Smarty version 3.1.33, created on 2018-11-16 23:55:15
+  from 'C:\xampp\htdocs\projetos\rgfalso\smarty\templates\index.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bec4d25383006_32931503',
+  'unifunc' => 'content_5bef4ad32d6056_64600094',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '78266565ed861b46cee57fabf62e7a06062c98b2' => 
+    '69ef7d57e6f2a5d92ac285482b80841c830987ce' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\rgfalso\\smarty\\templates\\index.html',
-      1 => 1542191789,
+      0 => 'C:\\xampp\\htdocs\\projetos\\rgfalso\\smarty\\templates\\index.html',
+      1 => 1542400994,
       2 => 'file',
     ),
   ),
-  'includes' => 
-  array (
-  ),
-),false)) {
-function content_5bec4d25383006_32931503 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->compiled->nocache_hash = '17908673915bec4d2534c4f4_19552197';
-?>
-<!DOCTYPE html>
+  'cache_lifetime' => 3600,
+),true)) {
+function content_5bef4ad32d6056_64600094 (Smarty_Internal_Template $_smarty_tpl) {
+?><!DOCTYPE html>
 <html lang="pt-br">
   <head>
     <!-- Meta tags Obrigatórias -->
@@ -109,24 +105,16 @@ $_smarty_tpl->compiled->nocache_hash = '17908673915bec4d2534c4f4_19552197';
 
     <!-- JavaScript (Opcional) -->
     <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
-    <?php echo '<script'; ?>
- src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"><?php echo '</script'; ?>
->
-    <?php echo '<script'; ?>
- src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"><?php echo '</script'; ?>
->
-    <?php echo '<script'; ?>
- src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"><?php echo '</script'; ?>
->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
-    <?php echo '<script'; ?>
- type="application/javascript">
+    <script type="application/javascript">
       $('input[type="file"]').change(function(e){
           var fileName = e.target.files[0].name;
           $('.custom-file-label').html(fileName);
       });
-    <?php echo '</script'; ?>
->
+    </script>
   </body>
 </html><?php }
 }

@@ -18,7 +18,7 @@ class Page {
         $this->tpl->config_dir   = $_SERVER['DOCUMENT_ROOT'] . '/smarty/configs/';
         $this->tpl->cache_dir    = $_SERVER['DOCUMENT_ROOT'] . '/smarty/cache/';
 
-        $this->tpl->caching = true;
+        $this->tpl->caching = false;
         
     }
 

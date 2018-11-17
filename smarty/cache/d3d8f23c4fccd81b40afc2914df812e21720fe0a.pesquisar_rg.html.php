@@ -1,4 +1,25 @@
-<!DOCTYPE html>
+<?php
+/* Smarty version 3.1.33, created on 2018-11-16 23:18:19
+  from 'C:\xampp\htdocs\projetos\rgfalso\smarty\templates\pesquisar_rg.html' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.33',
+  'unifunc' => 'content_5bef422bce4dd8_16617719',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '412db7de07ccb32e47eb07e13d1f667892007168' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\projetos\\rgfalso\\smarty\\templates\\pesquisar_rg.html',
+      1 => 1542400994,
+      2 => 'file',
+    ),
+  ),
+  'cache_lifetime' => 3600,
+),true)) {
+function content_5bef422bce4dd8_16617719 (Smarty_Internal_Template $_smarty_tpl) {
+?><!DOCTYPE html>
 <html lang="pt-br">
   <head>
     <!-- Meta tags Obrigatórias -->
@@ -79,8 +100,8 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingOne" data-parent="#pesquisa">
                   <div class="card-body text-left">
                       <div class="form-group">
-                        <label for="num_rg">Número do RG Falso</label>
-                        <input class="form-control" type="number" name="num_rg" id="num_rg" placeholder="digite o número do rg falso">
+                        <label for="rg">Número do RG Falso</label>
+                        <input class="form-control" type="number" name="rg" id="rg" placeholder="digite o número do rg falso">
                       </div>
                   </div>
                 </div>
@@ -117,4 +138,5 @@
       });
     </script>
   </body>
-</html>
+</html><?php }
+}

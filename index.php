@@ -11,7 +11,7 @@ $app = new Slim();
 
 $app->config('debug', true);
 
-
+// Mostra a página inicial
 $app->get('/', function() {
     
 $teste = new Page();
@@ -20,6 +20,7 @@ $teste->setTpl('index.html');
 
 });
 
+// Lista os resultados 
 $app->get('/lista', function() {
     
 $teste = new Page();
@@ -29,6 +30,7 @@ $teste->setTpl('listar_rg.html');
 });
 
 
+// Mostra o formulário de pesquisa
 $app->get('/pesquisa', function() {
     
 $teste = new Page();
@@ -37,36 +39,38 @@ $teste->setTpl('pesquisar_rg.html');
 
 });
 
+// Executa a pesquisa e redireciona para listar_rg
 $app->post('/pesquisa', function() {
     
 	$dados = new Rg();
 	$dados->setData($_POST);
+	// echo $dados->setnome();
+	// echo $dados->setnome_mae();
+	// echo $dados->setdt_nascimento();
+	// echo $dados->setrg();
+	
+	// $dados->getValues()
 	// echo $dados->getnome();
 	// echo $dados->getnome_mae();
 	// echo $dados->getdt_nascimento();
-	
-	$dados->pesquisa();
+	// echo $dados->getrg();
 
+	// Original
+	// $result = $dados->pesquisa();
 	// echo '<pre>';
-	// print_r($dados);
+	// print_r($result);
 	// echo '</pre>';
+	// echo '</br>';
+
+	$dados->pesquisa();
 	
 
-	$array_autores = array(
-		"Juliano Niederauer",
-		"Alexamdre Coutinho",
-		"Lino Sarlo da Silva",
-		"Felipe"
-	);
+	echo '<pre>';
+		print_r($dados->pesquisa());
+		echo '</pre>';
 
-	require_once('vendor/smarty/smarty/libs/Smarty.class.php');
-	$smarty = new Smarty();
-	$smarty->template_dir = $_SERVER['DOCUMENT_ROOT'] . '/smarty/templates/';
-        $smarty->compile_dir  = $_SERVER['DOCUMENT_ROOT'] . '/smarty/templates_c/';
-        $smarty->config_dir   = $_SERVER['DOCUMENT_ROOT'] . '/smarty/configs/';
-        $smarty->cache_dir    = $_SERVER['DOCUMENT_ROOT'] . '/smarty/cache/';
-	$smarty->assign("autores", $array_autores);
-	$smarty->display("listar_rg.html");
+	$page = new Page();
+	$page->setTpl('listar_rg.html', array("dados"=>$dados->pesquisa()));
 	
 });
 

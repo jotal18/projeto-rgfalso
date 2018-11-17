@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-11-16 16:15:23
-  from 'C:\xampp\htdocs\rgfalso\smarty\templates\listar_rg.html' */
+/* Smarty version 3.1.33, created on 2018-11-17 00:51:05
+  from 'C:\xampp\htdocs\projetos\rgfalso\smarty\templates\listar_rg.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5beedf0b15ded1_97589525',
+  'unifunc' => 'content_5bef57e9197226_19768474',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '908620eaa218bb0e8686c696773f5f38505d7b33' => 
+    '8840afc81b769ac4174ae66b59e0e58467952a90' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\rgfalso\\smarty\\templates\\listar_rg.html',
-      1 => 1542381321,
+      0 => 'C:\\xampp\\htdocs\\projetos\\rgfalso\\smarty\\templates\\listar_rg.html',
+      1 => 1542412263,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5beedf0b15ded1_97589525 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bef57e9197226_19768474 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -82,20 +82,20 @@ function content_5beedf0b15ded1_97589525 (Smarty_Internal_Template $_smarty_tpl)
                 
                 <tbody>
                   <?php
-$__section_i_0_loop = (is_array(@$_loop=$_smarty_tpl->tpl_vars['autores']->value) ? count($_loop) : max(0, (int) $_loop));
+$__section_i_0_loop = (is_array(@$_loop=$_smarty_tpl->tpl_vars['dados']->value) ? count($_loop) : max(0, (int) $_loop));
 $__section_i_0_total = $__section_i_0_loop;
 $_smarty_tpl->tpl_vars['__smarty_section_i'] = new Smarty_Variable(array());
 if ($__section_i_0_total !== 0) {
 for ($__section_i_0_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] = 0; $__section_i_0_iteration <= $__section_i_0_total; $__section_i_0_iteration++, $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']++){
 ?>
                   <tr>
-                    <th scope="row"><?php echo $_smarty_tpl->tpl_vars['autores']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)];?>
+                    <th scope="row"><?php echo $_smarty_tpl->tpl_vars['dados']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['idrg'];?>
 </th>
-                    <td><?php echo $_smarty_tpl->tpl_vars['autores']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)];?>
+                    <td><?php echo $_smarty_tpl->tpl_vars['dados']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['nome'];?>
 </td>
-                    <td><?php echo $_smarty_tpl->tpl_vars['autores']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)];?>
+                    <td><?php echo $_smarty_tpl->tpl_vars['dados']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['num_rg'];?>
 </td>
-                    <td><a class="btn btn-primary" href="#">Ofício</a></td>
+                    <td><a class="btn btn-primary" href="#">Oficio</a></td>
                     <td><a class="btn btn-warning" href="#">Detalhar</a></td>
                     <td><a class="btn btn-danger" href="#"><i class="fas fa-trash-alt"></i></i></a></td>
                   </tr>

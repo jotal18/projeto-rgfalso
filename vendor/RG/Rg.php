@@ -49,16 +49,32 @@ class Rg extends Model{
 	{
 		$sql = new Sql();
 
-		$results = $sql->select("SELECT * FROM rg WHERE nome = :nome" , array(
-				":nome" => $this->getnome()
+		$results = $sql->select("SELECT * FROM rg WHERE nome = :nome AND nome_mae = :nome_mae AND dt_nascimento = :dt_nascimento || num_rg = :num_rg" , array(
+				":nome" => $this->getnome(),
+				":nome_mae" => $this->getnome_mae(),
+				":dt_nascimento" => $this->getdt_nascimento(),
+				":num_rg" => $this->getnum_rg()
 		));
 
-		$this->setData($results[0]);
+		$this->setData($results);
+
+
+		if (count($results) === 0) {
+			throw new \Exception("Nenhum resultado encontrado.", 1);
+			
+			
+		} else {
+			return $results;
+		}
+
+
 		
-		echo '<pre>';
-		print_r($results[0]);
-		echo '</pre>';
 		
+		// Mostra o resultado da pesquisa
+		// echo '<pre>';
+		// print_r($results);
+		// echo '</pre>';
+
 	}
 }
 

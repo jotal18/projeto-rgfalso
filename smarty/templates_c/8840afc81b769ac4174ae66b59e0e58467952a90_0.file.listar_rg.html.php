@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-11-16 15:49:15
-  from 'C:\xampp\htdocs\rgfalso\smarty\templates\listar_rg.html' */
+/* Smarty version 3.1.33, created on 2018-11-17 16:10:42
+  from 'C:\xampp\htdocs\projetos\rgfalso\smarty\templates\listar_rg.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5beed8eb2f56e7_96018765',
+  'unifunc' => 'content_5bf02f72021fc4_80198685',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '908620eaa218bb0e8686c696773f5f38505d7b33' => 
+    '8840afc81b769ac4174ae66b59e0e58467952a90' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\rgfalso\\smarty\\templates\\listar_rg.html',
-      1 => 1542379753,
+      0 => 'C:\\xampp\\htdocs\\projetos\\rgfalso\\smarty\\templates\\listar_rg.html',
+      1 => 1542467438,
       2 => 'file',
     ),
   ),
@@ -20,10 +20,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5beed8eb2f56e7_96018765 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->compiled->nocache_hash = '11191571515beed8eb2af1d0_01012881';
-?>
-<!DOCTYPE html>
+function content_5bf02f72021fc4_80198685 (Smarty_Internal_Template $_smarty_tpl) {
+?><!DOCTYPE html>
 <html lang="pt-br">
   <head>
     <!-- Meta tags Obrigatórias -->
@@ -84,27 +82,27 @@ $_smarty_tpl->compiled->nocache_hash = '11191571515beed8eb2af1d0_01012881';
                 
                 <tbody>
                   <?php
-$__section_i_0_loop = (is_array(@$_loop=$_smarty_tpl->tpl_vars['array_teste']->value) ? count($_loop) : max(0, (int) $_loop));
+$__section_i_0_loop = (is_array(@$_loop=$_smarty_tpl->tpl_vars['dados']->value) ? count($_loop) : max(0, (int) $_loop));
 $__section_i_0_total = $__section_i_0_loop;
 $_smarty_tpl->tpl_vars['__smarty_section_i'] = new Smarty_Variable(array());
 if ($__section_i_0_total !== 0) {
 for ($__section_i_0_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] = 0; $__section_i_0_iteration <= $__section_i_0_total; $__section_i_0_iteration++, $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']++){
 ?>
                   <tr>
-                    <th scope="row"><?php echo $_smarty_tpl->tpl_vars['array_teste']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)];?>
+                    <th scope="row"><?php echo $_smarty_tpl->tpl_vars['dados']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['idrg'];?>
 </th>
-                    <!-- <td><?php echo $_smarty_tpl->tpl_vars['dados']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)];?>
-</td> -->
-                    <!-- <td><?php echo $_smarty_tpl->tpl_vars['dados']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)];?>
-</td> -->
-                    <td><a class="btn btn-primary" href="#">Ofício</a></td>
-                    <td><a class="btn btn-warning" href="#">Detalhar</a></td>
+                    <td><?php echo $_smarty_tpl->tpl_vars['dados']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['nome'];?>
+</td>
+                    <td><?php echo $_smarty_tpl->tpl_vars['dados']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['num_rg'];?>
+</td>
+                    <td><a class="btn btn-primary" target="_blank" href="/upload/oficio/112345679joao.pdf">Oficio</a></td>
+                    <td><a class="btn btn-warning" target="_blank" href="#">Detalhar</a></td>
                     <td><a class="btn btn-danger" href="#"><i class="fas fa-trash-alt"></i></i></a></td>
                   </tr>
-                  <?php
+                    <?php
 }
 }
-?>                  
+?>          
                 </tbody>
               </table>
 

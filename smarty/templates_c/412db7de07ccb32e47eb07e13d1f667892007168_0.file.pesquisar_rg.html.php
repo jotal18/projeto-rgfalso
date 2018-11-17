@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-11-16 15:38:41
-  from 'C:\xampp\htdocs\rgfalso\smarty\templates\pesquisar_rg.html' */
+/* Smarty version 3.1.33, created on 2018-11-17 00:14:32
+  from 'C:\xampp\htdocs\projetos\rgfalso\smarty\templates\pesquisar_rg.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5beed671984301_17306938',
+  'unifunc' => 'content_5bef4f58059c38_61568696',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '8e4ddc1cf01f9fe2de1e94cbd34098b14234e129' => 
+    '412db7de07ccb32e47eb07e13d1f667892007168' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\rgfalso\\smarty\\templates\\pesquisar_rg.html',
-      1 => 1542375660,
+      0 => 'C:\\xampp\\htdocs\\projetos\\rgfalso\\smarty\\templates\\pesquisar_rg.html',
+      1 => 1542410052,
       2 => 'file',
     ),
   ),
@@ -20,10 +20,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5beed671984301_17306938 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->compiled->nocache_hash = '10980645985beed671945af1_06276051';
-?>
-<!DOCTYPE html>
+function content_5bef4f58059c38_61568696 (Smarty_Internal_Template $_smarty_tpl) {
+?><!DOCTYPE html>
 <html lang="pt-br">
   <head>
     <!-- Meta tags Obrigatórias -->
@@ -104,8 +102,8 @@ $_smarty_tpl->compiled->nocache_hash = '10980645985beed671945af1_06276051';
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingOne" data-parent="#pesquisa">
                   <div class="card-body text-left">
                       <div class="form-group">
-                        <label for="rg">Número do RG Falso</label>
-                        <input class="form-control" type="number" name="rg" id="rg" placeholder="digite o número do rg falso">
+                        <label for="num_rg">Número do RG Falso</label>
+                        <input class="form-control" type="number" name="num_rg" id="num_rg" placeholder="digite o número do rg falso">
                       </div>
                   </div>
                 </div>
