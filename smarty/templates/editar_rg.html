@@ -30,9 +30,9 @@
                 Menu
               </div>
                 <ul class="list-group">
-                  <a href="cadastrar_rg.html" class="list-group-item list-group-item-action">Cadastrar RG</a>
-                  <a href="editar_rg.html" class="list-group-item list-group-item-action">Editar RG</a>
-                  <a href="pesquisar_rg.html" class="list-group-item list-group-item-action">Pesquisar RG</a>
+                  <a href="/cadastrar" class="list-group-item list-group-item-action">Cadastrar RG</a>
+                  <a href="/editar" class="list-group-item list-group-item-action">Editar RG</a>
+                  <a href="/pesquisa" class="list-group-item list-group-item-action">Pesquisar RG</a>
                 </ul>
             </div>
         </div>
@@ -46,26 +46,30 @@
                 <form class="text-left">
                 <div class="form-group">
                   <label for="nome">Nome</label>
-                  <input class="form-control" type="text" name="nome" id="nome" placeholder="digite o nome completo">
+                  <input class="form-control" type="text" name="nome" id="nome" placeholder="digite o nome completo" value="{$dados.nome}">
                 </div>
                 <div class="form-group">
                   <label for="nome_mae">Nome da Mãe</label>
-                  <input class="form-control" type="text" name="nome_mae" id="nome_mae" placeholder="digite o nome completo da mãe">
+                  <input class="form-control" type="text" name="nome_mae" id="nome_mae" placeholder="digite o nome completo da mãe" value="{$dados.nome_mae}">
                 </div>
                 <div class="form-group">
                   <label for="dt_nascimento">Data de Nascimento</label>
-                  <input class="form-control" type="text" name="dt_nascimento" id="dt_nascimento" placeholder="dd/mm/aaaa" maxlength="10">
+                  <input class="form-control" type="text" name="dt_nascimento" id="dt_nascimento" placeholder="dd/mm/aaaa" maxlength="10"  value="{$dados.dt_nascimento}">
+                </div>
+                <div class="form-group">
+                  <label for="num_rg">Número do RG</label>
+                  <input class="form-control" type="number" name="num_rg" id="num_rg" placeholder="somente números" value="{$dados.num_rg}">
                 </div>
                 <p class="mb-2">Escolha o ofício digitalizado</p>
                 <div class="custom-file">
                   <input type="file" class="custom-file-input" id="oficio" required>
                   <label class="custom-file-label" for="oficio" name="oficio">
-                    escolha o arquivo digitalizado no formato .pdf
+                     {$dados.oficio}
                   </label>
                 </div>
                 <div class="row mt-4">
                   <div class="col">
-                    <a href="index.html" class="btn btn-secondary btn-block" type="reset">Voltar</a>
+                    <a href="/pesquisa" class="btn btn-secondary btn-block" type="reset">Voltar</a>
                   </div>
                   <div class="col">
                     <button class="btn btn-primary btn-block" type="submit">Alterar</button>

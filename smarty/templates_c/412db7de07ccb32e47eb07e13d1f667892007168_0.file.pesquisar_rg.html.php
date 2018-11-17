@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-11-17 00:14:32
+/* Smarty version 3.1.33, created on 2018-11-17 17:15:52
   from 'C:\xampp\htdocs\projetos\rgfalso\smarty\templates\pesquisar_rg.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bef4f58059c38_61568696',
+  'unifunc' => 'content_5bf03eb851f857_06878970',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '412db7de07ccb32e47eb07e13d1f667892007168' => 
     array (
       0 => 'C:\\xampp\\htdocs\\projetos\\rgfalso\\smarty\\templates\\pesquisar_rg.html',
-      1 => 1542410052,
+      1 => 1542471267,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bef4f58059c38_61568696 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bf03eb851f857_06878970 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -53,9 +53,9 @@ function content_5bef4f58059c38_61568696 (Smarty_Internal_Template $_smarty_tpl)
                 Menu
               </div>
                 <ul class="list-group">
-                  <a href="cadastrar_rg.html" class="list-group-item list-group-item-action">Cadastrar RG</a>
-                  <a href="editar_rg.html" class="list-group-item list-group-item-action">Editar RG</a>
-                  <a href="pesquisar_rg.html" class="list-group-item list-group-item-action">Pesquisar RG</a>
+                  <a href="/cadastrar" class="list-group-item list-group-item-action">Cadastrar RG</a>
+                  <a href="/editar" class="list-group-item list-group-item-action">Editar RG</a>
+                  <a href="/pesquisa" class="list-group-item list-group-item-action">Pesquisar RG</a>
                 </ul>
             </div>
         </div>

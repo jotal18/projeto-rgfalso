@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-11-17 16:10:42
+/* Smarty version 3.1.33, created on 2018-11-17 17:32:15
   from 'C:\xampp\htdocs\projetos\rgfalso\smarty\templates\listar_rg.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bf02f72021fc4_80198685',
+  'unifunc' => 'content_5bf0428f557449_01566671',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8840afc81b769ac4174ae66b59e0e58467952a90' => 
     array (
       0 => 'C:\\xampp\\htdocs\\projetos\\rgfalso\\smarty\\templates\\listar_rg.html',
-      1 => 1542467438,
+      1 => 1542472293,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bf02f72021fc4_80198685 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bf0428f557449_01566671 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -55,14 +55,22 @@ function content_5bf02f72021fc4_80198685 (Smarty_Internal_Template $_smarty_tpl)
                 Menu
               </div>
                 <ul class="list-group">
-                  <a href="cadastrar_rg.html" class="list-group-item list-group-item-action">Cadastrar RG</a>
-                  <a href="editar_rg.html" class="list-group-item list-group-item-action">Editar RG</a>
-                  <a href="pesquisar_rg.html" class="list-group-item list-group-item-action">Pesquisar RG</a>
+                  <a href="/cadastrar" class="list-group-item list-group-item-action">Cadastrar RG</a>
+                  <a href="/editar" class="list-group-item list-group-item-action">Editar RG</a>
+                  <a href="/pesquisa" class="list-group-item list-group-item-action">Pesquisar RG</a>
                 </ul>
             </div>
         </div>
 
         <div class="col-md-9">
+
+            <?php if ($_smarty_tpl->tpl_vars['error']->value != '') {?>
+            <div>
+              <h4 class="text-danger"><?php echo $_smarty_tpl->tpl_vars['error']->value;?>
+</h4>
+            </div>
+
+            <?php } else { ?>
             <div class="card border-success">
               <div class="card-header text-white bg-success">
                 <h5>Listagem de RG</h5>
@@ -96,6 +104,8 @@ for ($__section_i_0_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_i']-
                     <td><?php echo $_smarty_tpl->tpl_vars['dados']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['num_rg'];?>
 </td>
                     <td><a class="btn btn-primary" target="_blank" href="/upload/oficio/112345679joao.pdf">Oficio</a></td>
+                    <td><a class="btn btn-success" href="/editar/<?php echo $_smarty_tpl->tpl_vars['dados']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['idrg'];?>
+">Editar</a></td>
                     <td><a class="btn btn-warning" target="_blank" href="#">Detalhar</a></td>
                     <td><a class="btn btn-danger" href="#"><i class="fas fa-trash-alt"></i></i></a></td>
                   </tr>
@@ -105,7 +115,7 @@ for ($__section_i_0_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_i']-
 ?>          
                 </tbody>
               </table>
-
+            <?php }?>
             </div>
         </div>
       </div>

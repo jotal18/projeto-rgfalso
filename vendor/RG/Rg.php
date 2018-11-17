@@ -25,14 +25,18 @@ class Rg extends Model{
 
 	}
 
-	public function get($idrg)
+	public function getId($idrg)
 	{
 		$sql = new Sql();
 
-		$results = $sql->select("SELECT * FROM rg WHERE id = :idcategory", [":idrg"=>$idrg
+		$results = $sql->select("SELECT * FROM rg WHERE idrg = :idrg", [":idrg"=>$idrg
 		]);
 
 		$this->setData($results[0]);
+
+		// echo '<pre>';
+		// print_r($results);
+		// echo '</pre>';
 
 	}
 
@@ -60,22 +64,26 @@ class Rg extends Model{
 
 
 		if (count($results) === 0) {
+
 			throw new \Exception("Nenhum resultado encontrado.", 1);
-			
-			
+
 		} else {
+
 			return $results;
+
 		}
-
-
-		
 		
 		// Mostra o resultado da pesquisa
-		// echo '<pre>';
-		// print_r($results);
-		// echo '</pre>';
+		echo '<pre>';
+		print_r($results);
+		echo '</pre>';
 
 	}
+
+	public function getError($error) {
+
+	}
+
 }
 
 

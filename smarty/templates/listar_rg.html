@@ -32,14 +32,21 @@
                 Menu
               </div>
                 <ul class="list-group">
-                  <a href="cadastrar_rg.html" class="list-group-item list-group-item-action">Cadastrar RG</a>
-                  <a href="editar_rg.html" class="list-group-item list-group-item-action">Editar RG</a>
-                  <a href="pesquisar_rg.html" class="list-group-item list-group-item-action">Pesquisar RG</a>
+                  <a href="/cadastrar" class="list-group-item list-group-item-action">Cadastrar RG</a>
+                  <a href="/editar" class="list-group-item list-group-item-action">Editar RG</a>
+                  <a href="/pesquisa" class="list-group-item list-group-item-action">Pesquisar RG</a>
                 </ul>
             </div>
         </div>
 
         <div class="col-md-9">
+
+            {if $error != "" }
+            <div>
+              <h4 class="text-danger">{$error}</h4>
+            </div>
+
+            {else}
             <div class="card border-success">
               <div class="card-header text-white bg-success">
                 <h5>Listagem de RG</h5>
@@ -64,13 +71,14 @@
                     <td>{$dados[i].nome}</td>
                     <td>{$dados[i].num_rg}</td>
                     <td><a class="btn btn-primary" target="_blank" href="/upload/oficio/112345679joao.pdf">Oficio</a></td>
+                    <td><a class="btn btn-success" href="/editar/{$dados[i].idrg}">Editar</a></td>
                     <td><a class="btn btn-warning" target="_blank" href="#">Detalhar</a></td>
                     <td><a class="btn btn-danger" href="#"><i class="fas fa-trash-alt"></i></i></a></td>
                   </tr>
                     {/section}          
                 </tbody>
               </table>
-
+            {/if}
             </div>
         </div>
       </div>
