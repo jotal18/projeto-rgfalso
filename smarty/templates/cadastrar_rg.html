@@ -13,7 +13,7 @@
   <body>
 
     <nav class="navbar navbar-expand-sm bg-success">
-      <a class="navbar-brand text-white font-weight-bold" href="index.html">Sistema de Controle de RG</a>   
+      <a class="navbar-brand text-white font-weight-bold" href="/">Sistema de Controle de RG</a>   
     </nav>
 
     <div class="container-fluid mt-2">
@@ -43,7 +43,7 @@
                 <h5>Cadastre os dados do RG Falso</h5>
               </div>
               <div class="card-body bg-white">
-                <form class="text-left" method="post" action="">
+                <form class="text-left" method="post" action="/cadastrar" enctype="multipart/form-data">
                   <div class="form-group">
                     <label for="nome">Nome</label>
                     <input class="form-control" type="text" name="nome" id="nome" placeholder="digite o nome completo">
@@ -62,7 +62,7 @@
                   </div>
                   <p class="mb-2">Escolha o ofício digitalizado</p>
                   <div class="custom-file">
-                    <input type="file" class="custom-file-input" id="oficio"  name="oficio" required>
+                    <input type="file" class="custom-file-input" id="oficio"  name="oficio">
                     <label class="custom-file-label" for="oficio" name="oficio">
                       escolha o arquivo digitalizado no formato .pdf
                     </label>

@@ -15,7 +15,7 @@
   <body>
 
     <nav class="navbar navbar-expand-sm bg-success">
-      <a class="navbar-brand text-white font-weight-bold" href="index.html">Sistema de Controle de RG</a>   
+      <a class="navbar-brand text-white font-weight-bold" href="/">Sistema de Controle de RG</a>   
     </nav>
 
     <div class="container-fluid mt-2">
@@ -70,7 +70,7 @@
                     <th scope="row">{$dados[i].idrg}</th>
                     <td>{$dados[i].nome}</td>
                     <td>{$dados[i].num_rg}</td>
-                    <td><a class="btn btn-primary" target="_blank" href="/upload/oficio/112345679joao.pdf">Oficio</a></td>
+                    <td><a class="btn btn-primary" target="_blank" href="upload/{$dados[i].oficio}">Oficio</a></td>
                     <td><a class="btn btn-success" href="/editar/{$dados[i].idrg}">Editar</a></td>
                     <td><a class="btn btn-warning" target="_blank" href="#">Detalhar</a></td>
                     <td><a class="btn btn-danger" href="#"><i class="fas fa-trash-alt"></i></i></a></td>

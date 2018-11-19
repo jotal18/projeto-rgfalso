@@ -2,7 +2,6 @@
 
 require_once('vendor/autoload.php');
 
-
 use APP\Page;
 use \Slim\Slim;
 use APP\Rg;
@@ -14,18 +13,42 @@ $app->config('debug', true);
 // Mostra a página inicial
 $app->get('/', function() {
     
-	$teste = new Page();
-
-	$teste->setTpl('index.html');
+	$dados = new Page();
+	$dados->setTpl('index.html');
 
 });
 
 // Mostra a página de cadastrar
 $app->get('/cadastrar', function() {
     
-	$teste = new Page();
+	$dados = new Page();
+	$dados->setTpl('cadastrar_rg.html');
 
-	$teste->setTpl('cadastrar_rg.html');
+});
+
+// Mostra a página de cadastro
+$app->post('/cadastrar', function() {
+
+	$dados = new Rg();
+	$dados->setData($_POST);
+
+	$dados->upload();
+	
+	echo "<pre>";
+	print_r($dados->getValues());
+	echo "</pre>";
+
+	$dados->save();	
+	header('Location: /cadastro');
+	exit;
+
+});
+
+// Mostra a página de listagem
+$app->get('/lista', function() {
+    
+	$dados = new Page();
+	$dados->setTpl('listar_rg.html');
 
 });
 
@@ -34,57 +57,60 @@ $app->get('/editar/:idrg', function($idrg) {
     
 	$dados = new Rg();
 	$dados->getId($idrg);
-	echo '<pre>';
-	print_r($dados->getValues());
-	echo '</pre>';
+	$pag = new Page();
+	$pag->setTpl('editar_rg.html', array("dados"=>$dados->getValues()));
 
-	$teste = new Page();
-	$teste->setTpl('editar_rg.html', array("dados"=>$dados->getValues()));
+});
+
+// Mostra a página de editar
+$app->post('/editar/:idrg', function($idrg) {
+    
+	$dados = new Rg();
+	$dados->getId((int)$idrg);
+	$dados->setData($_POST);
+	$dados->update();
+
+	$msg = "Dados alterados com sucesso!";
+
+	$pag = new Page();
+	$pag->setTpl('index.html', array("dados"=>$msg));
 
 });
 
 // Mostra a página de pesquisar
 $app->get('/pesquisa', function() {
     
-	$teste = new Page();
-
-	$teste->setTpl('pesquisar_rg.html');
+	$dados = new Page();
+	$dados->setTpl('pesquisar_rg.html');
 
 });
 
-// Executa a pesquisa e redireciona para listar_rg
+// Mostra a página de pesquisar
 $app->post('/pesquisa', function() {
-    
-	$dados = new Rg();
-	$dados->setData($_POST);
 	
 	try {
 
+		$dados = new Rg();
+		$dados->setData($_POST);
 		$dados->pesquisa();
-		// echo '<pre>';
-		// print_r($dados->pesquisa());
-		// echo '</pre>';
+		echo "<pre>";
+		print_r($dados->pesquisa());
+		echo "</pre>";
+
 		$msg = "";
-		$page = new Page();
-		$page->setTpl('listar_rg.html', array("dados"=>$dados->pesquisa(), "error"=>$msg));
+
+		$pag = new Page();
+		$pag->setTpl('listar_rg.html', array("dados"=>$dados->pesquisa(), "error"=>$msg));
 
 	} catch (Exception $e){
 
 		$msg = $e->getMessage();
-		$page = new Page();
-		$page->setTpl('listar_rg.html', array("error"=>$e->getMessage()));
+
+		$pag = new Page();
+		$pag->setTpl('listar_rg.html', array("error"=>$e->getMessage()));
 
 	}	
 	
-});
-
-// Mostra a página de listagem
-$app->get('/lista/:idrg', function($idrg) {
-    
-	$teste = new Page();
-
-	$teste->setTpl('listar_rg.html');
-
 });
 
 $app->run();

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-11-17 17:15:52
+/* Smarty version 3.1.33, created on 2018-11-17 21:11:16
   from 'C:\xampp\htdocs\projetos\rgfalso\smarty\templates\pesquisar_rg.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bf03eb851f857_06878970',
+  'unifunc' => 'content_5bf075e40b2a01_68589554',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '412db7de07ccb32e47eb07e13d1f667892007168' => 
     array (
       0 => 'C:\\xampp\\htdocs\\projetos\\rgfalso\\smarty\\templates\\pesquisar_rg.html',
-      1 => 1542471267,
+      1 => 1542485470,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bf03eb851f857_06878970 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bf075e40b2a01_68589554 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -36,7 +36,7 @@ function content_5bf03eb851f857_06878970 (Smarty_Internal_Template $_smarty_tpl)
   <body>
 
     <nav class="navbar navbar-expand-sm bg-success">
-      <a class="navbar-brand text-white font-weight-bold" href="index.html">Sistema de Controle de RG</a>   
+      <a class="navbar-brand text-white font-weight-bold" href="/">Sistema de Controle de RG</a>   
     </nav>
 
     <div class="container-fluid mt-2">

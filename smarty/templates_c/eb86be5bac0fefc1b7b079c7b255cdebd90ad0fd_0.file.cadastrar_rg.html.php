@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-11-17 17:53:30
+/* Smarty version 3.1.33, created on 2018-11-18 00:30:37
   from 'C:\xampp\htdocs\projetos\rgfalso\smarty\templates\cadastrar_rg.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bf0478a0017d6_76339150',
+  'unifunc' => 'content_5bf0a49dba6cc6_99885493',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'eb86be5bac0fefc1b7b079c7b255cdebd90ad0fd' => 
     array (
       0 => 'C:\\xampp\\htdocs\\projetos\\rgfalso\\smarty\\templates\\cadastrar_rg.html',
-      1 => 1542471694,
+      1 => 1542497435,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bf0478a0017d6_76339150 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bf0a49dba6cc6_99885493 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -36,7 +36,7 @@ function content_5bf0478a0017d6_76339150 (Smarty_Internal_Template $_smarty_tpl)
   <body>
 
     <nav class="navbar navbar-expand-sm bg-success">
-      <a class="navbar-brand text-white font-weight-bold" href="index.html">Sistema de Controle de RG</a>   
+      <a class="navbar-brand text-white font-weight-bold" href="/">Sistema de Controle de RG</a>   
     </nav>
 
     <div class="container-fluid mt-2">
@@ -66,7 +66,7 @@ function content_5bf0478a0017d6_76339150 (Smarty_Internal_Template $_smarty_tpl)
                 <h5>Cadastre os dados do RG Falso</h5>
               </div>
               <div class="card-body bg-white">
-                <form class="text-left" method="post" action="">
+                <form class="text-left" method="post" action="/cadastrar" enctype="multipart/form-data">
                   <div class="form-group">
                     <label for="nome">Nome</label>
                     <input class="form-control" type="text" name="nome" id="nome" placeholder="digite o nome completo">
@@ -85,7 +85,7 @@ function content_5bf0478a0017d6_76339150 (Smarty_Internal_Template $_smarty_tpl)
                   </div>
                   <p class="mb-2">Escolha o ofício digitalizado</p>
                   <div class="custom-file">
-                    <input type="file" class="custom-file-input" id="oficio"  name="oficio" required>
+                    <input type="file" class="custom-file-input" id="oficio"  name="oficio">
                     <label class="custom-file-label" for="oficio" name="oficio">
                       escolha o arquivo digitalizado no formato .pdf
                     </label>
