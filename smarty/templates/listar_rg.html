@@ -14,11 +14,11 @@
   </head>
   <body>
 
-    <nav class="navbar navbar-expand-sm bg-success">
+    <nav class="navbar navbar-expand-sm bg-info">
       <a class="navbar-brand text-white font-weight-bold" href="/">Sistema de Controle de RG</a>   
     </nav>
 
-    <div class="container-fluid mt-2">
+    <div class="container mt-2">
 
       <div class="text-center mb-5">
         <h1></h1>
@@ -27,13 +27,12 @@
       <div class="row text-center">
         
         <div class="col-md-3">
-            <div class="card border-success bg-success">
-              <div class="card-header text-white">
+            <div class="card border-secondary bg-light">
+              <div class="card-header font-weight-bold">
                 Menu
               </div>
                 <ul class="list-group">
                   <a href="/cadastrar" class="list-group-item list-group-item-action">Cadastrar RG</a>
-                  <a href="/editar" class="list-group-item list-group-item-action">Editar RG</a>
                   <a href="/pesquisa" class="list-group-item list-group-item-action">Pesquisar RG</a>
                 </ul>
             </div>
@@ -47,8 +46,8 @@
             </div>
 
             {else}
-            <div class="card border-success">
-              <div class="card-header text-white bg-success">
+            <div class="card border-secondary">
+              <div class="card-header font-weight-bold bg-light">
                 <h5>Listagem de RG</h5>
               </div>
 

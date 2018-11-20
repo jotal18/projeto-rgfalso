@@ -95,7 +95,7 @@ class Rg extends Model{
 		
 		date_default_timezone_set("Brazil/East");
 		$ext = strtolower(substr($file['name'],-4));
-		$new_name = date("dmy") . $ext;
+		$new_name = date("dmyhis") . $ext;
 		$dir = $_SERVER['DOCUMENT_ROOT'] .'/upload/';
 
 		if (($file['size'] == 0) || ($file['type'] != 'application/pdf')) {
@@ -111,12 +111,10 @@ class Rg extends Model{
 				$file['name'] = $new_name;
 				$this->setData($file);
 			} else {
-				echo 'Não foi possível realizar o upload.';
+				throw new \Exception("Arquivo inválido.", 1);
 			}
 			
 		}
-
-	
 
 	}
 

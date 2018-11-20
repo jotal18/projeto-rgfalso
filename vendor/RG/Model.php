@@ -6,6 +6,7 @@ class Model{
 
 	private $values = [];
 
+	// Método GET e SET para atributo
 	public function __call($name, $args)
 	{
 		$method = substr($name, 0, 3);
@@ -22,6 +23,7 @@ class Model{
 		}
 	}
 
+	// Método SET para array
 	public function setData($data = array())
 	{
 		foreach ($data as $key => $value) {
@@ -29,6 +31,7 @@ class Model{
 		}
 	}
 
+	// Método GET para array
 	public function getValues()
 	{
 		return $this->values;

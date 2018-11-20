@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-11-17 21:16:13
+/* Smarty version 3.1.33, created on 2018-11-19 22:53:28
   from 'C:\xampp\htdocs\projetos\rgfalso\smarty\templates\index.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bf0770d9dca70_26226376',
+  'unifunc' => 'content_5bf330d8937042_80066278',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '69ef7d57e6f2a5d92ac285482b80841c830987ce' => 
     array (
       0 => 'C:\\xampp\\htdocs\\projetos\\rgfalso\\smarty\\templates\\index.html',
-      1 => 1542485558,
+      1 => 1542664380,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bf0770d9dca70_26226376 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bf330d8937042_80066278 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -35,11 +35,11 @@ function content_5bf0770d9dca70_26226376 (Smarty_Internal_Template $_smarty_tpl)
   </head>
   <body>
 
-    <nav class="navbar navbar-expand-sm bg-success">
+    <nav class="navbar navbar-expand-sm bg-info">
       <a class="navbar-brand text-white font-weight-bold" href="/">Sistema de Controle de RG</a>   
     </nav>
 
-    <div class="container-fluid mt-2">
+    <div class="container mt-2">
 
       <div class="text-center mb-5">
         <h1></h1>
@@ -48,13 +48,12 @@ function content_5bf0770d9dca70_26226376 (Smarty_Internal_Template $_smarty_tpl)
       <div class="row text-center">
         
         <div class="col-md-3">
-            <div class="card border-success bg-success">
-              <div class="card-header text-white">
+            <div class="card border-secondary bg-light">
+              <div class="card-header font-weight-bold">
                 Menu
               </div>
                 <ul class="list-group">
                   <a href="/cadastrar" class="list-group-item list-group-item-action">Cadastrar RG</a>
-                  <a href="/editar" class="list-group-item list-group-item-action">Editar RG</a>
                   <a href="/pesquisa" class="list-group-item list-group-item-action">Pesquisar RG</a>
                 </ul>
             </div>

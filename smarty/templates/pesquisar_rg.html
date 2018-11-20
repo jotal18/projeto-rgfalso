@@ -12,11 +12,11 @@
   </head>
   <body>
 
-    <nav class="navbar navbar-expand-sm bg-success">
+    <nav class="navbar navbar-expand-sm bg-info">
       <a class="navbar-brand text-white font-weight-bold" href="/">Sistema de Controle de RG</a>   
     </nav>
 
-    <div class="container-fluid mt-2">
+    <div class="container mt-2">
 
       <div class="text-center mb-5">
         <h1></h1>
@@ -25,13 +25,12 @@
       <div class="row text-center">
         
         <div class="col-md-3">
-            <div class="card border-success bg-success">
-              <div class="card-header text-white">
+            <div class="card border-secondary bg-light">
+              <div class="card-header font-weight-bold">
                 Menu
               </div>
                 <ul class="list-group">
                   <a href="/cadastrar" class="list-group-item list-group-item-action">Cadastrar RG</a>
-                  <a href="/editar" class="list-group-item list-group-item-action">Editar RG</a>
                   <a href="/pesquisa" class="list-group-item list-group-item-action">Pesquisar RG</a>
                 </ul>
             </div>
@@ -41,10 +40,10 @@
           <form method="post" action="/pesquisa">
             <div class="accordion" id="pesquisa">
 
-              <div class="card border-success">
-                <div class="card-header bg-success p-1" id="headingOne">
+              <div class="card border-secondary">
+                <div class="card-header bg-light p-1 border-secondary" id="headingOne">
                   <h5 class="mb-0">
-                    <button class="btn btn-block btn-success" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <button class="btn btn-block btn-light font-weight-bold" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                       Pesquisa por Nome/Nome da Mãe/Data de Nascimento
                     </button>
                   </h5>
@@ -68,10 +67,10 @@
                 </div>
               </div>
 
-              <div class="card border-success">
-                <div class="card-header bg-success p-1" id="headingTwo">
+              <div class="card border-secondary">
+                <div class="card-header bg-light p-1 border-secondary" id="headingTwo">
                   <h5 class="mb-0">
-                    <button class="btn btn-block btn-success" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    <button class="btn btn-block btn-light font-weight-bold" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                       Pesquisa por Número do RG Falso
                     </button>
                   </h5>
@@ -86,16 +85,17 @@
                 </div>
               </div>
 
-              <div class="row mt-4">
-                <div class="col">
-                  <button class="btn btn-secondary btn-block" type="reset">Cancelar</button>
-                </div>
-                <div class="col">
-                  <button class="btn btn-primary btn-block" type="submit">Pesquisar</button>
-                </div>
-              </div>
-
             </div>  
+
+            <div class="row mt-4">
+              <div class="col">
+                <button class="btn btn-secondary btn-block" type="reset">Cancelar</button>
+              </div>
+              <div class="col">
+                <button class="btn btn-primary btn-block" type="submit">Pesquisar</button>
+              </div>
+            </div>
+
           </form>     
         </div>
       </div>

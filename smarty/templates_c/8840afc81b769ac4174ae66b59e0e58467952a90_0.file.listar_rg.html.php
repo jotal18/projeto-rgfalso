@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-11-18 01:49:27
+/* Smarty version 3.1.33, created on 2018-11-19 22:54:19
   from 'C:\xampp\htdocs\projetos\rgfalso\smarty\templates\listar_rg.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bf0b717444990_04822720',
+  'unifunc' => 'content_5bf3310be14c12_43885300',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8840afc81b769ac4174ae66b59e0e58467952a90' => 
     array (
       0 => 'C:\\xampp\\htdocs\\projetos\\rgfalso\\smarty\\templates\\listar_rg.html',
-      1 => 1542502153,
+      1 => 1542664458,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bf0b717444990_04822720 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bf3310be14c12_43885300 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -37,11 +37,11 @@ function content_5bf0b717444990_04822720 (Smarty_Internal_Template $_smarty_tpl)
   </head>
   <body>
 
-    <nav class="navbar navbar-expand-sm bg-success">
+    <nav class="navbar navbar-expand-sm bg-info">
       <a class="navbar-brand text-white font-weight-bold" href="/">Sistema de Controle de RG</a>   
     </nav>
 
-    <div class="container-fluid mt-2">
+    <div class="container mt-2">
 
       <div class="text-center mb-5">
         <h1></h1>
@@ -50,13 +50,12 @@ function content_5bf0b717444990_04822720 (Smarty_Internal_Template $_smarty_tpl)
       <div class="row text-center">
         
         <div class="col-md-3">
-            <div class="card border-success bg-success">
-              <div class="card-header text-white">
+            <div class="card border-secondary bg-light">
+              <div class="card-header font-weight-bold">
                 Menu
               </div>
                 <ul class="list-group">
                   <a href="/cadastrar" class="list-group-item list-group-item-action">Cadastrar RG</a>
-                  <a href="/editar" class="list-group-item list-group-item-action">Editar RG</a>
                   <a href="/pesquisa" class="list-group-item list-group-item-action">Pesquisar RG</a>
                 </ul>
             </div>
@@ -71,8 +70,8 @@ function content_5bf0b717444990_04822720 (Smarty_Internal_Template $_smarty_tpl)
             </div>
 
             <?php } else { ?>
-            <div class="card border-success">
-              <div class="card-header text-white bg-success">
+            <div class="card border-secondary">
+              <div class="card-header font-weight-bold bg-light">
                 <h5>Listagem de RG</h5>
               </div>
 

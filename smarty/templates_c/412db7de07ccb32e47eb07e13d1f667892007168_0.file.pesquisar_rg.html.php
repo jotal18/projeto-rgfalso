@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-11-17 21:11:16
+/* Smarty version 3.1.33, created on 2018-11-19 22:57:02
   from 'C:\xampp\htdocs\projetos\rgfalso\smarty\templates\pesquisar_rg.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bf075e40b2a01_68589554',
+  'unifunc' => 'content_5bf331ae60db15_90784292',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '412db7de07ccb32e47eb07e13d1f667892007168' => 
     array (
       0 => 'C:\\xampp\\htdocs\\projetos\\rgfalso\\smarty\\templates\\pesquisar_rg.html',
-      1 => 1542485470,
+      1 => 1542664615,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bf075e40b2a01_68589554 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bf331ae60db15_90784292 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -35,11 +35,11 @@ function content_5bf075e40b2a01_68589554 (Smarty_Internal_Template $_smarty_tpl)
   </head>
   <body>
 
-    <nav class="navbar navbar-expand-sm bg-success">
+    <nav class="navbar navbar-expand-sm bg-info">
       <a class="navbar-brand text-white font-weight-bold" href="/">Sistema de Controle de RG</a>   
     </nav>
 
-    <div class="container-fluid mt-2">
+    <div class="container mt-2">
 
       <div class="text-center mb-5">
         <h1></h1>
@@ -48,13 +48,12 @@ function content_5bf075e40b2a01_68589554 (Smarty_Internal_Template $_smarty_tpl)
       <div class="row text-center">
         
         <div class="col-md-3">
-            <div class="card border-success bg-success">
-              <div class="card-header text-white">
+            <div class="card border-secondary bg-light">
+              <div class="card-header font-weight-bold">
                 Menu
               </div>
                 <ul class="list-group">
                   <a href="/cadastrar" class="list-group-item list-group-item-action">Cadastrar RG</a>
-                  <a href="/editar" class="list-group-item list-group-item-action">Editar RG</a>
                   <a href="/pesquisa" class="list-group-item list-group-item-action">Pesquisar RG</a>
                 </ul>
             </div>
@@ -64,10 +63,10 @@ function content_5bf075e40b2a01_68589554 (Smarty_Internal_Template $_smarty_tpl)
           <form method="post" action="/pesquisa">
             <div class="accordion" id="pesquisa">
 
-              <div class="card border-success">
-                <div class="card-header bg-success p-1" id="headingOne">
+              <div class="card border-secondary">
+                <div class="card-header bg-light p-1 border-secondary" id="headingOne">
                   <h5 class="mb-0">
-                    <button class="btn btn-block btn-success" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <button class="btn btn-block btn-light font-weight-bold" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                       Pesquisa por Nome/Nome da Mãe/Data de Nascimento
                     </button>
                   </h5>
@@ -91,10 +90,10 @@ function content_5bf075e40b2a01_68589554 (Smarty_Internal_Template $_smarty_tpl)
                 </div>
               </div>
 
-              <div class="card border-success">
-                <div class="card-header bg-success p-1" id="headingTwo">
+              <div class="card border-secondary">
+                <div class="card-header bg-light p-1 border-secondary" id="headingTwo">
                   <h5 class="mb-0">
-                    <button class="btn btn-block btn-success" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    <button class="btn btn-block btn-light font-weight-bold" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                       Pesquisa por Número do RG Falso
                     </button>
                   </h5>
@@ -109,16 +108,17 @@ function content_5bf075e40b2a01_68589554 (Smarty_Internal_Template $_smarty_tpl)
                 </div>
               </div>
 
-              <div class="row mt-4">
-                <div class="col">
-                  <button class="btn btn-secondary btn-block" type="reset">Cancelar</button>
-                </div>
-                <div class="col">
-                  <button class="btn btn-primary btn-block" type="submit">Pesquisar</button>
-                </div>
-              </div>
-
             </div>  
+
+            <div class="row mt-4">
+              <div class="col">
+                <button class="btn btn-secondary btn-block" type="reset">Cancelar</button>
+              </div>
+              <div class="col">
+                <button class="btn btn-primary btn-block" type="submit">Pesquisar</button>
+              </div>
+            </div>
+
           </form>     
         </div>
       </div>

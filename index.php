@@ -5,6 +5,7 @@ require_once('vendor/autoload.php');
 use APP\Page;
 use \Slim\Slim;
 use APP\Rg;
+use APP\Validacao;
 
 $app = new Slim();
 
@@ -29,18 +30,27 @@ $app->get('/cadastrar', function() {
 // Mostra a página de cadastro
 $app->post('/cadastrar', function() {
 
-	$dados = new Rg();
+	$dados = new Validacao();
 	$dados->setData($_POST);
-
-	$dados->upload();
 	
-	echo "<pre>";
-	print_r($dados->getValues());
-	echo "</pre>";
 
-	$dados->save();	
-	header('Location: /cadastro');
-	exit;
+try{
+	$dados->validaNome($dados->getnome());
+} catch(Nome $e){
+	echo $e->getMessage();
+
+}catch(Mae $e) {
+	echo $e->getMessage();
+}
+	
+
+
+
+	// $dados->upload();
+
+	// $dados->save();	
+	// header('Location: /');
+	// exit;
 
 });
 
@@ -93,9 +103,6 @@ $app->post('/pesquisa', function() {
 		$dados = new Rg();
 		$dados->setData($_POST);
 		$dados->pesquisa();
-		echo "<pre>";
-		print_r($dados->pesquisa());
-		echo "</pre>";
 
 		$msg = "";
 

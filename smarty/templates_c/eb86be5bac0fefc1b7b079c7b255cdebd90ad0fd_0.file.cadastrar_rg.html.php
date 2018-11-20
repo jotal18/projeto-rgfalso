@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-11-18 00:30:37
+/* Smarty version 3.1.33, created on 2018-11-19 22:59:41
   from 'C:\xampp\htdocs\projetos\rgfalso\smarty\templates\cadastrar_rg.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bf0a49dba6cc6_99885493',
+  'unifunc' => 'content_5bf3324da9b4e2_37590035',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'eb86be5bac0fefc1b7b079c7b255cdebd90ad0fd' => 
     array (
       0 => 'C:\\xampp\\htdocs\\projetos\\rgfalso\\smarty\\templates\\cadastrar_rg.html',
-      1 => 1542497435,
+      1 => 1542664778,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bf0a49dba6cc6_99885493 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bf3324da9b4e2_37590035 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -35,11 +35,11 @@ function content_5bf0a49dba6cc6_99885493 (Smarty_Internal_Template $_smarty_tpl)
   </head>
   <body>
 
-    <nav class="navbar navbar-expand-sm bg-success">
+    <nav class="navbar navbar-expand-sm bg-info">
       <a class="navbar-brand text-white font-weight-bold" href="/">Sistema de Controle de RG</a>   
     </nav>
 
-    <div class="container-fluid mt-2">
+    <div class="container mt-2">
 
       <div class="text-center mb-5">
         <h1></h1>
@@ -48,41 +48,49 @@ function content_5bf0a49dba6cc6_99885493 (Smarty_Internal_Template $_smarty_tpl)
       <div class="row text-center">
         
         <div class="col-md-3">
-            <div class="card border-success bg-success">
-              <div class="card-header text-white">
+            <div class="card border-secondary bg-light">
+              <div class="card-header font-weight-bold">
                 Menu
               </div>
                 <ul class="list-group">
                   <a href="/cadastrar" class="list-group-item list-group-item-action">Cadastrar RG</a>
-                  <a href="/editar" class="list-group-item list-group-item-action">Editar RG</a>
                   <a href="/pesquisa" class="list-group-item list-group-item-action">Pesquisar RG</a>
                 </ul>
             </div>
         </div>
 
         <div class="col-md-9">
-            <div class="card border-success bg-success">
-              <div class="card-header text-white">
+            <div class="card border-secondary bg-light">
+              <div class="card-header font-weight-bold">
                 <h5>Cadastre os dados do RG Falso</h5>
               </div>
               <div class="card-body bg-white">
                 <form class="text-left" method="post" action="/cadastrar" enctype="multipart/form-data">
+                 
                   <div class="form-group">
                     <label for="nome">Nome</label>
                     <input class="form-control" type="text" name="nome" id="nome" placeholder="digite o nome completo">
-                  </div>
+                    <small class="text-danger">* Campo obrigatório</small>
+                  </div> 
+
                   <div class="form-group">
                     <label for="nome_mae">Nome da Mãe</label>
                     <input class="form-control" type="text" name="nome_mae" id="nome_mae" placeholder="digite o nome completo da mãe">
+                    <small class="text-danger">* Campo obrigatório</small>
                   </div>
+
                   <div class="form-group">
                     <label for="dt_nascimento">Data de Nascimento</label>
                     <input class="form-control" type="text" name="dt_nascimento" id="dt_nascimento" placeholder="dd/mm/aaaa" maxlength="10">
+                    <small class="text-danger">* Campo obrigatório</small>
                   </div>
+
                   <div class="form-group">
                     <label for="num_rg">Número do RG</label>
                     <input class="form-control" type="number" name="num_rg" id="num_rg" placeholder="somente números">
+                    <small class="text-danger">* Campo obrigatório</small>
                   </div>
+
                   <p class="mb-2">Escolha o ofício digitalizado</p>
                   <div class="custom-file">
                     <input type="file" class="custom-file-input" id="oficio"  name="oficio">
@@ -90,6 +98,7 @@ function content_5bf0a49dba6cc6_99885493 (Smarty_Internal_Template $_smarty_tpl)
                       escolha o arquivo digitalizado no formato .pdf
                     </label>
                   </div>
+
                   <div class="row mt-4">
                     <div class="col">
                       <button class="btn btn-secondary btn-block" type="reset">Cancelar</button>
@@ -98,6 +107,7 @@ function content_5bf0a49dba6cc6_99885493 (Smarty_Internal_Template $_smarty_tpl)
                       <button class="btn btn-primary btn-block" type="submit">Cadastrar</button>
                     </div>
                   </div> 
+
                 </form>  
               </div>
               
