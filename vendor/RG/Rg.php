@@ -17,26 +17,26 @@ class Rg extends Model{
 	{
 		$sql = new Sql();
 
-		$sql->query("UPDATE rg SET nome = :nome, nome_mae = :nome_mae, dt_nascimento = :dt_nascimento, num_rg = :num_rg WHERE idrg = :idrg", array(
+		$sql->query("UPDATE rg SET nome = :nome, nome_mae = :nome_mae, dt_nascimento = :dt_nascimento, num_rg = :num_rg, oficio = :oficio WHERE idrg = :idrg", array(
 				":nome" => $this->getnome(),
 				":nome_mae" => $this->getnome_mae(),
 				":dt_nascimento" => $this->getdt_nascimento(),
 				":num_rg" => $this->getnum_rg(),
-				":idrg" => $this->getidrg()
-
+				":idrg" => $this->getidrg(),
+				":oficio" => $this->getoficio()
 		));
 
 	}
 
-	public function save()
+	public function save($nome, $nome_mae, $dt_nascimento, $num_rg)
 	{
 		$sql = new Sql();
 
 		$results = $sql->query("INSERT INTO rg (nome, nome_mae, dt_nascimento, num_rg, oficio) VALUES(:nome, :nome_mae, :dt_nascimento, :num_rg, :oficio)", array(
-				":nome" => $this->getnome(),
-				":nome_mae" => $this->getnome_mae(),
-				":dt_nascimento" => $this->getdt_nascimento(),
-				":num_rg" => $this->getnum_rg(),
+				":nome" => $nome,
+				":nome_mae" => $nome_mae,
+				":dt_nascimento" => $dt_nascimento,
+				":num_rg" => $num_rg,
 				":oficio" => $this->getname()
 		));
 
@@ -100,14 +100,11 @@ class Rg extends Model{
 
 		if (($file['size'] == 0) || ($file['type'] != 'application/pdf')) {
 
-			echo 'Arquivo inválido.';
 			throw new \Exception("Arquivo inválido.", 1);
-			
 
 		} else  {
 
 			if (move_uploaded_file($file['tmp_name'], $dir.$new_name)) {
-				echo 'Arquivo movido com sucesso.';
 				$file['name'] = $new_name;
 				$this->setData($file);
 			} else {

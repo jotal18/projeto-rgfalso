@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-11-19 22:53:28
+/* Smarty version 3.1.33, created on 2018-11-20 22:34:53
   from 'C:\xampp\htdocs\projetos\rgfalso\smarty\templates\index.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bf330d8937042_80066278',
+  'unifunc' => 'content_5bf4a82d741094_28656408',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '69ef7d57e6f2a5d92ac285482b80841c830987ce' => 
     array (
       0 => 'C:\\xampp\\htdocs\\projetos\\rgfalso\\smarty\\templates\\index.html',
-      1 => 1542664380,
+      1 => 1542760481,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bf330d8937042_80066278 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bf4a82d741094_28656408 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -62,9 +62,12 @@ function content_5bf330d8937042_80066278 (Smarty_Internal_Template $_smarty_tpl)
         <div class="col-md-9">
 
           <?php if (isset($_smarty_tpl->tpl_vars['dados']->value)) {?>
-            <div>
-              <h3 class="text-primary"><?php echo $_smarty_tpl->tpl_vars['dados']->value;?>
-</h3>
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+              <strong><?php echo $_smarty_tpl->tpl_vars['dados']->value;?>
+</strong>
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
             </div>
           <?php }?>
 

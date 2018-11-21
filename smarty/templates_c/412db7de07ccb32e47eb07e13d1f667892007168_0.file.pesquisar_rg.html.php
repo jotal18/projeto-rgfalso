@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-11-19 22:57:02
+/* Smarty version 3.1.33, created on 2018-11-21 00:33:52
   from 'C:\xampp\htdocs\projetos\rgfalso\smarty\templates\pesquisar_rg.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bf331ae60db15_90784292',
+  'unifunc' => 'content_5bf499e028ce93_78806611',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '412db7de07ccb32e47eb07e13d1f667892007168' => 
     array (
       0 => 'C:\\xampp\\htdocs\\projetos\\rgfalso\\smarty\\templates\\pesquisar_rg.html',
-      1 => 1542664615,
+      1 => 1542756823,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bf331ae60db15_90784292 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bf499e028ce93_78806611 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="pt-br">
   <head>

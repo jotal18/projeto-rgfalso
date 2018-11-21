@@ -42,7 +42,7 @@
                 <h5>Altere os dados do RG Falso</h5>
               </div>
               <div class="card-body bg-white">
-                <form class="text-left" action="/editar/{$dados.idrg}" method="post">
+                <form class="text-left" action="/editar/{$dados.idrg}" method="post" enctype="multipart/form-data">
                   <div class="form-group">
                     <label for="nome">Nome</label>
                     <input class="form-control" type="text" name="nome" id="nome" placeholder="digite o nome completo" value="{$dados.nome}">
@@ -59,13 +59,20 @@
                     <label for="num_rg">Número do RG</label>
                     <input class="form-control" type="number" name="num_rg" id="num_rg" placeholder="somente números" value="{$dados.num_rg}">
                   </div>
-                  <p class="mb-2">Escolha o ofício digitalizado</p>
+                 <p class="mb-2">Escolha o ofício digitalizado</p>
                   <div class="custom-file">
-                    <input type="file" class="custom-file-input" id="oficio" required>
+                    <input type="file" class="custom-file-input" id="oficio" name="oficio" required>
                     <label class="custom-file-label" for="oficio" name="oficio">
                        {$dados.oficio}
                     </label>
                   </div>
+
+                   {if isset($error) & !empty($error)}
+                      <small class="text-danger">{$error}</small> 
+                    {else}
+                      <small class="text-danger">* Campo obrigatório</small>
+                    {/if}
+                    
                   <div class="row mt-4">
                     <div class="col">
                       <a href="/pesquisa" class="btn btn-secondary btn-block" type="reset">Voltar</a>

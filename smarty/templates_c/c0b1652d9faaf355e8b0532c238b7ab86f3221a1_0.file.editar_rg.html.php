@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-11-19 22:54:32
+/* Smarty version 3.1.33, created on 2018-11-21 02:11:37
   from 'C:\xampp\htdocs\projetos\rgfalso\smarty\templates\editar_rg.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bf3311874a839_82018309',
+  'unifunc' => 'content_5bf4b0c9503d22_20419920',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c0b1652d9faaf355e8b0532c238b7ab86f3221a1' => 
     array (
       0 => 'C:\\xampp\\htdocs\\projetos\\rgfalso\\smarty\\templates\\editar_rg.html',
-      1 => 1542664471,
+      1 => 1542762693,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bf3311874a839_82018309 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bf4b0c9503d22_20419920 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -66,7 +66,7 @@ function content_5bf3311874a839_82018309 (Smarty_Internal_Template $_smarty_tpl)
               </div>
               <div class="card-body bg-white">
                 <form class="text-left" action="/editar/<?php echo $_smarty_tpl->tpl_vars['dados']->value['idrg'];?>
-" method="post">
+" method="post" enctype="multipart/form-data">
                   <div class="form-group">
                     <label for="nome">Nome</label>
                     <input class="form-control" type="text" name="nome" id="nome" placeholder="digite o nome completo" value="<?php echo $_smarty_tpl->tpl_vars['dados']->value['nome'];?>
@@ -87,14 +87,22 @@ function content_5bf3311874a839_82018309 (Smarty_Internal_Template $_smarty_tpl)
                     <input class="form-control" type="number" name="num_rg" id="num_rg" placeholder="somente números" value="<?php echo $_smarty_tpl->tpl_vars['dados']->value['num_rg'];?>
 ">
                   </div>
-                  <p class="mb-2">Escolha o ofício digitalizado</p>
+                 <p class="mb-2">Escolha o ofício digitalizado</p>
                   <div class="custom-file">
-                    <input type="file" class="custom-file-input" id="oficio" required>
+                    <input type="file" class="custom-file-input" id="oficio" name="oficio" required>
                     <label class="custom-file-label" for="oficio" name="oficio">
                        <?php echo $_smarty_tpl->tpl_vars['dados']->value['oficio'];?>
 
                     </label>
                   </div>
+
+                   <?php if (isset($_smarty_tpl->tpl_vars['error']->value)&!empty($_smarty_tpl->tpl_vars['error']->value)) {?>
+                      <small class="text-danger"><?php echo $_smarty_tpl->tpl_vars['error']->value;?>
+</small> 
+                    <?php } else { ?>
+                      <small class="text-danger">* Campo obrigatório</small>
+                    <?php }?>
+                    
                   <div class="row mt-4">
                     <div class="col">
                       <a href="/pesquisa" class="btn btn-secondary btn-block" type="reset">Voltar</a>

@@ -37,6 +37,16 @@
         </div>
 
         <div class="col-md-9">
+
+          {if isset($dados) & !empty($dados)}
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+              <strong>{$dados}</strong>
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+          {/if}
+
             <div class="card border-secondary bg-light">
               <div class="card-header font-weight-bold">
                 <h5>Cadastre os dados do RG Falso</h5>
@@ -46,34 +56,41 @@
                  
                   <div class="form-group">
                     <label for="nome">Nome</label>
-                    <input class="form-control" type="text" name="nome" id="nome" placeholder="digite o nome completo">
+                    <input class="form-control" type="text" name="nome" id="nome" placeholder="digite o nome completo" required value="{if isset($nome)}{$nome}{/if}">
                     <small class="text-danger">* Campo obrigatório</small>
                   </div> 
 
                   <div class="form-group">
                     <label for="nome_mae">Nome da Mãe</label>
-                    <input class="form-control" type="text" name="nome_mae" id="nome_mae" placeholder="digite o nome completo da mãe">
+                    <input class="form-control" type="text" name="nome_mae" id="nome_mae" placeholder="digite o nome completo da mãe" required value="{if isset($nome_mae)}{$nome_mae}{/if}">
                     <small class="text-danger">* Campo obrigatório</small>
                   </div>
 
                   <div class="form-group">
                     <label for="dt_nascimento">Data de Nascimento</label>
-                    <input class="form-control" type="text" name="dt_nascimento" id="dt_nascimento" placeholder="dd/mm/aaaa" maxlength="10">
+                    <input class="form-control" type="text" name="dt_nascimento" id="dt_nascimento" placeholder="dd/mm/aaaa" maxlength="10" required onkeypress="mascaraData(this)" value="{if isset($dt_inicial)}{$dt_inicial}{/if}">
                     <small class="text-danger">* Campo obrigatório</small>
                   </div>
 
                   <div class="form-group">
                     <label for="num_rg">Número do RG</label>
-                    <input class="form-control" type="number" name="num_rg" id="num_rg" placeholder="somente números">
+                    <input class="form-control" type="number" name="num_rg" id="num_rg" placeholder="somente números" required  value="{if isset($num_rg)}{$num_rg} {/if}">
                     <small class="text-danger">* Campo obrigatório</small>
                   </div>
 
                   <p class="mb-2">Escolha o ofício digitalizado</p>
                   <div class="custom-file">
-                    <input type="file" class="custom-file-input" id="oficio"  name="oficio">
+                    <input type="file" class="custom-file-input" id="oficio" name="oficio" required>
                     <label class="custom-file-label" for="oficio" name="oficio">
                       escolha o arquivo digitalizado no formato .pdf
                     </label>
+
+                    {if isset($error) & !empty($error)}
+                      <small class="text-danger">{$error}</small> 
+                    {else}
+                      <small class="text-danger">* Campo obrigatório</small>
+                    {/if}
+
                   </div>
 
                   <div class="row mt-4">
@@ -107,6 +124,79 @@
           var fileName = e.target.files[0].name;
           $('.custom-file-label').html(fileName);
       });
+    </script>
+
+    <script>
+      function mascaraData(val) {
+  var pass = val.value;
+  var expr = /[0123456789]/;
+
+  for (i = 0; i < pass.length; i++) {
+    // charAt -> retorna o caractere posicionado no índice especificado
+    var lchar = val.value.charAt(i);
+    var nchar = val.value.charAt(i + 1);
+
+    if (i == 0) {
+      // search -> retorna um valor inteiro, indicando a posição do inicio da primeira
+      // ocorrência de expReg dentro de instStr. Se nenhuma ocorrencia for encontrada o método retornara -1
+      // instStr.search(expReg);
+      if ((lchar.search(expr) != 0) || (lchar > 3)) {
+        val.value = "";
+      }
+
+    } else if (i == 1) {
+
+      if (lchar.search(expr) != 0) {
+        // substring(indice1,indice2)
+        // indice1, indice2 -> será usado para delimitar a string
+        var tst1 = val.value.substring(0, (i));
+        val.value = tst1;
+        continue;
+      }
+
+      if ((nchar != '/') && (nchar != '')) {
+        var tst1 = val.value.substring(0, (i) + 1);
+
+        if (nchar.search(expr) != 0)
+          var tst2 = val.value.substring(i + 2, pass.length);
+        else
+          var tst2 = val.value.substring(i + 1, pass.length);
+
+        val.value = tst1 + '/' + tst2;
+      }
+
+    } else if (i == 4) {
+
+      if (lchar.search(expr) != 0) {
+        var tst1 = val.value.substring(0, (i));
+        val.value = tst1;
+        continue;
+      }
+
+      if ((nchar != '/') && (nchar != '')) {
+        var tst1 = val.value.substring(0, (i) + 1);
+
+        if (nchar.search(expr) != 0)
+          var tst2 = val.value.substring(i + 2, pass.length);
+        else
+          var tst2 = val.value.substring(i + 1, pass.length);
+
+        val.value = tst1 + '/' + tst2;
+      }
+    }
+
+    if (i >= 6) {
+      if (lchar.search(expr) != 0) {
+        var tst1 = val.value.substring(0, (i));
+        val.value = tst1;
+      }
+    }
+  }
+
+  if (pass.length > 10)
+    val.value = val.value.substring(0, 10);
+  return true;
+}
     </script>
   </body>
 </html>
